@@ -1,18 +1,17 @@
 module.exports = {
-  name: 'Aquamarine',
-  url: 'https://demo.sweetsoft.vn/Aquamarine',
+  name: 'MUMOIRA',
+  url: 'https://qc-game-html.netlify.app/',
   author: 'SweetSoft JSC',
-  defaultTitle: 'AQUAMARINE RESORT & SPA, Nha Trang',
-  defaultDescription: 'Aquamarine Resort Spa Cam Ranh by Swandor Nha Trang - khu nghỉ dưỡng 5 sao giữa thiên nhiên xanh mát với phòng sang trọng, công viên nước, ẩm thực đa dạng và vô số hoạt động giải trí cho mọi lứa tuổi.',
-  defaultOgImage: 'https://demo.sweetsoft.vn/Aquamarine/share-bg.jpg',
-  //'https://demo.sweetsoft.vn/Aquamarine/favicon.ico'
-  // https://aquamarineresortspa.com/favicon.ico
-  favicon: 'https://aquamarineresortspa.com/favicon.ico',
+  defaultTitle: 'MUMOIRA RESORT',
+  defaultDescription: 'MUMOIRA Mu mới ra tháng 12 2025 - Mu Sài Gòn Pc Season 6.9 - Lâu dài - hấp dẫn - đông vui',
+  defaultOgImage: 'https://qc-game-html.netlify.app/share-bg.jpg',
+
+  favicon: 'https://MUMOIRAresortspa.com/favicon.ico',
   // /Orgacert
   baseUrl: process.env.NODE_ENV === 'production' ? '/Orgacert' : '',
-  baseLink: process.env.NODE_ENV === 'production' ? 'https://demo.sweetsoft.vn/Aquamarine' : '',
+  baseLink: process.env.NODE_ENV === 'production' ? 'https://qc-game-html.netlify.app' : '',
   imgUrl:
     process.env.NODE_ENV === 'production'
-      ? 'https://demo.sweetsoft.vn/Aquamarine'
+      ? 'https://qc-game-html.netlify.app'
       : '',
 }
