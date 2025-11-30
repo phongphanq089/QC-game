@@ -1,0 +1,79 @@
+<header
+  class="fixed top-0 w-full z-50 bg-[#0b0c15]/95 backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300"
+  id="main-header">
+  <div class="max-w-[1900px] mx-auto px-4 lg:px-6">
+    <div class="flex justify-between items-center h-[80px]">
+
+      <div class="flex flex-col justify-center">
+        <a href="#" class="flex items-center gap-2 group">
+          <div
+            class="w-8 h-8 bg-rose-600 flex items-center justify-center skew-x-[-10deg] shadow-lg shadow-rose-600/20 group-hover:shadow-rose-600/50 transition">
+            <span class="text-white font-bold skew-x-[10deg] text-lg">M</span>
+          </div>
+          <span
+            class="text-3xl text-white font-heading font-bold italic tracking-wide group-hover:text-rose-500 transition">
+            MUMOIRA<span class="text-rose-600">.IO</span>
+          </span>
+        </a>
+        <span class="text-[11px] text-gray-400 font-bold tracking-wider mt-[-2px] hidden md:block">
+          TRANG TỔNG HỢP MU ONLINE UY TÍN NHẤT VIỆT NAM
+        </span>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-1 h-full">
+        <a href="#"
+          class="nav-link active h-full flex items-center px-4 text-sm font-bold uppercase hover:text-white transition relative group">
+          Trang Chủ <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-rose-600 scale-x-0 group-hover:scale-x-100 transition duration-300"></span>
+        </a>
+        <a href="#"
+          class="nav-link h-full flex items-center px-4 text-sm font-bold uppercase hover:text-white transition relative group">
+          Tìm Kiếm Mu <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-rose-600 scale-x-0 group-hover:scale-x-100 transition duration-300"></span>
+        </a>
+        <a href="#"
+          class="nav-link h-full flex items-center px-4 text-sm font-bold uppercase hover:text-white transition relative group">
+          Quảng Cáo <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-rose-600 scale-x-0 group-hover:scale-x-100 transition duration-300"></span>
+        </a>
+        <a href="#"
+          class="nav-link h-full flex items-center px-4 text-sm font-bold uppercase text-yellow-400 hover:text-yellow-300 transition relative group">
+          <span class="hot-badge">HOT</span> Đăng Mu Mới
+          <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-x-100 transition duration-300"></span>
+        </a>
+        <a href="#"
+          class="nav-link h-full flex items-center px-4 text-sm font-bold uppercase text-white hover:text-rose-400 transition relative group">
+          <span class="hot-badge bg-blue-600">HOT</span> Hướng Dẫn
+          <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-rose-600 scale-x-0 group-hover:scale-x-100 transition duration-300"></span>
+        </a>
+      </nav>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-rose-500 transition p-2 focus:outline-none">
+        <i data-lucide="menu" class="w-8 h-8 icon-menu"></i>
+        <i data-lucide="x" class="w-8 h-8 icon-close hidden"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden bg-[#151621] border-t border-gray-800 lg:hidden h-screen overflow-y-auto pb-20">
+    <ul class="flex flex-col p-4 space-y-2">
+      <li><a href="#"
+          class="block px-4 py-3 rounded bg-rose-600/10 text-white font-bold border-l-4 border-rose-600">Trang Chủ</a>
+      </li>
+      <li><a href="#"
+          class="block px-4 py-3 rounded text-gray-400 hover:text-white hover:bg-gray-800 font-bold transition">Tìm
+          Kiếm Mu</a></li>
+      <li><a href="#"
+          class="block px-4 py-3 rounded text-gray-400 hover:text-white hover:bg-gray-800 font-bold transition">Quảng
+          Cáo</a></li>
+      <li><a href="#"
+          class="block px-4 py-3 rounded text-yellow-400 hover:bg-yellow-500/10 font-bold transition flex items-center"><span
+            class="hot-badge mr-2">HOT</span> Đăng Mu Mới</a></li>
+      <li><a href="#"
+          class="block px-4 py-3 rounded text-gray-300 hover:text-white hover:bg-gray-800 font-bold transition flex items-center"><span
+            class="hot-badge mr-2">HOT</span> Hướng Dẫn Chơi</a></li>
+    </ul>
+  </div>
+</header>

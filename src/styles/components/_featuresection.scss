@@ -1,0 +1,33 @@
+.tabs-slider {
+  overflow: unset !important;
+}
+
+.tabs-slider .swiper-slide {
+  width: auto;
+}
+
+.tabs-slider .swiper-scrollbar {
+  bottom: -13px !important;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.tabs-slider .swiper-scrollbar-drag {
+  background-color: #39b54a;
+}
+
+@media (min-width: 1024px) {
+  .tabs-slider .swiper-scrollbar {
+    display: none;
+  }
+
+  .tabs-slider .swiper-wrapper {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    transform: none !important;
+  }
+  .tabs-slider .swiper-slide {
+    width: auto !important;
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,63 @@
+---
+title: "Trang chủ"
+description: "Aquamarine Resort Spa Cam Ranh by Swandor Nha Trang - khu nghỉ dưỡng 5 sao giữa thiên nhiên xanh mát với
+phòng sang trọng, công viên nước, ẩm thực đa dạng và vô số hoạt động giải trí cho mọi lứa tuổi."
+permalink: "/"
+---
+{% import "components/ParallaxHeader.njk" as Header %}
+{% extends "layouts/public.njk" %}
+
+{% block mainContent %}
+<div>
+  {% include "page/home/bannerHero.njk" %}
+  {% include "page/home/MainContent.njk" %}
+</div>
+{% endblock %}
+
+
+{% block pageScripts %}
+
+<script>
+  lucide.createIcons();
+</script>
+
+<script>
+  $(document).ready(function () {
+    const $body = $('body');
+    const $mobileMenu = $('#mobile-menu');
+    const $menuIcon = $('.icon-menu');
+    const $closeIcon = $('.icon-close');
+
+    $('#mobile-menu-btn').click(function () {
+      // 1. Toggle Menu
+      $mobileMenu.slideToggle(300);
+
+      // 2. Toggle Scroll Lock Body
+      // Tôi dùng class 'overflow-hidden' của Tailwind,
+      // kèm thêm class 'menu-open' để chắc chắn (force priority)
+      $body.toggleClass('overflow-hidden menu-open');
+
+      // 3. Đổi icon Menu <-> X
+      $menuIcon.toggleClass('hidden');
+      $closeIcon.toggleClass('hidden');
+    });
+
+    // Xử lý khi resize màn hình (đang mở menu mobile mà kéo to ra desktop)
+    $(window).resize(function () {
+      if ($(window).width() >= 1024) { // Breakpoint lg
+        $mobileMenu.hide();
+
+        // MỞ KHÓA SCROLL NGAY LẬP TỨC
+        $body.removeClass('overflow-hidden menu-open');
+
+        // Reset icon về mặc định
+        $menuIcon.removeClass('hidden');
+        $closeIcon.addClass('hidden');
+      }
+    });
+  });
+
+  lucide.createIcons();
+</script>
+
+{% endblock %}

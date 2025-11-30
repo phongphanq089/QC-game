@@ -1,0 +1,24 @@
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
+  {% for brand in listProduct.items %}
+  <a href="{{ site.baseUrl }}/phoska-fruit/" class="w-full group overflow-hidden rounded-xl bg-white shadow-sm"
+    data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
+    <div class=" wrapImgResize imgSquare">
+      <img src="https://demo.sweetsoft.vn/Orgacert/images/product-card-1.png" alt="Nguyễn Văn A"
+        class="transition-transform duration-300 group-hover:scale-105" />
+    </div>
+    <div class="px-3 xs:px-5 pb-5">
+      <div class="mb-3">
+        <span
+          class="inline-block rounded-md bg-primary-color px-2 xs:px-3 py-1 text-[10px] xs:text-xs sm:text-sm font-medium whitespace-nowrap text-white">
+          PROTON FUSION
+        </span>
+      </div>
+      <h3 class="text-lg xs:text-xl font-bold text-gray-900">Phoska Fruit</h3>
+      <p class="mt-1 text-base text-gray-700">Loại phân bón: phân bón NPK</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+<div class="mt-5 lg:mt-16 sm:mb-9">
+  {% include "components/Pagination.njk" %}
+</div>

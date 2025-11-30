@@ -1,0 +1,138 @@
+@import './components/font';
+@import './components/breapoint';
+@import './components/wrapImgResize';
+// @import './components/wow';
+@import './components/deatail-text';
+@import './components/aos';
+@import './components/swiper';
+@import './components/button';
+@import './components/custom';
+@import './components/featuresection';
+@import './components/cardStyleClipPath';
+@import './components/home-page';
+@import './components/header';
+@import './components/contact';
+
+:root {
+  --text-color__header: #000;
+  --primary-color: #39b54a;
+  --primary-active__border: #39b54a;
+  --primary-active__bg: #dcfce7;
+}
+
+.text-color__header {
+  color: var(--text-color__header);
+}
+
+.bg-active__header {
+  background-color: var(--primary-active__bg);
+  border: 1px solid var(--primary-active__border);
+  color: var(--primary-color);
+}
+
+body.loading-page {
+  overflow: hidden;
+}
+
+body.loading-page::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+body.loading-page.remove-after::after {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #050505;
+  color: #a1a1b5;
+}
+
+.font-heading {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+@keyframes hot-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.hot-badge {
+  animation: hot-pulse 1s infinite;
+  background: linear-gradient(45deg, #ff0000, #ff8800);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 4px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-link.active {
+  color: white;
+  background-color: rgba(225, 29, 72, 0.1);
+  border-bottom: 2px solid #e11d48;
+}
+
+/* Class tiện ích để khóa cuộn (nếu Tailwind chưa load kịp hoặc muốn override) */
+body.menu-open {
+  overflow: hidden !important;
+}
+
+/* Ad Slot Styling */
+.ad-slot {
+  background-color: #0f1016;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      #13141c 25%,
+      transparent 25%,
+      transparent 75%,
+      #13141c 75%,
+      #13141c
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #13141c 25%,
+      #0f1016 25%,
+      #0f1016 75%,
+      #13141c 75%,
+      #13141c
+    );
+  background-size: 20px 20px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pattern nền cho footer */
+.footer-pattern {
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 0
+  );
+  background-size: 20px 20px;
+}

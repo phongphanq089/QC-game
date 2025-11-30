@@ -1,0 +1,31 @@
+{#
+Đây là một Nunjucks Macro, tương đương với một React Component.
+Các "props" (title, subtitle...) trở thành các tham số (arguments) của macro.
+#}
+{% macro render(title, subtitle, backgroundImageUrl) %}
+
+{#
+Xử lý giá trị mặc định.
+Nếu người dùng không cung cấp backgroundImageUrl khi gọi macro,
+nó sẽ tự động dùng ảnh mặc định này.
+#}
+{% set finalBgImage = backgroundImageUrl if backgroundImageUrl else
+"https://demo.sweetsoft.vn/Orgacert/images/bg-header.jpg"
+%}
+
+<div class="relative py-10 2xl:py-24 md:py-16 bg-cover bg-center bg-no-repeat overflow-hidden"
+  style="background-image: url('{{ finalBgImage }}');" data-aos="flip-up" data-aos-delay="50" data-aos-duration="1000">
+  <!-- Lớp phủ màu để làm nổi bật chữ -->
+  <div class="absolute inset-0 bg-green-900/60 "></div>
+
+  <!-- Nội dung text -->
+  <div class="relative z-10 text-center text-white container mx-auto px-4">
+    <h2 class="text-2xl 2xl:text-4xl font-bold tracking-tight uppercase header-font">
+      {{ title }}
+    </h2>
+    <p class="max-2xl:text-sm 2xl:mt-4 max-w-4xl mx-auto px-2 text-lg text-gray-200">
+      {{ subtitle }}
+    </p>
+  </div>
+</div>
+{% endmacro %}

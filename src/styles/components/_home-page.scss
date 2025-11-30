@@ -1,0 +1,86 @@
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  opacity: 1;
+
+  .mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 15px;
+    position: relative;
+
+    @include downMd {
+      width: 20px;
+      height: 35px;
+    }
+  }
+
+  .wheel {
+    width: 5px;
+    height: 10px;
+    background: white;
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    top: 8px;
+    opacity: 1;
+  }
+  100% {
+    top: 28px;
+    opacity: 0;
+  }
+}
+
+.paper-bg-texture {
+  background-color: #f2efe8;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* CSS tùy chỉnh cho hiệu ứng Desktop */
+@media (min-width: 768px) {
+  .nav-active .nav-line {
+    width: 100%;
+  }
+
+  .nav-active .nav-desc {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-cover-center {
+  background-size: cover;
+  background-position: center;
+}
+
+.service-col-divider-wrapper {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  // background-color: #00000080;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-items: end;
+  height: 100%;
+  display: grid;
+  position: absolute;
+  inset: 0%;
+}
+
+.white-gradient-divider {
+  background-image: linear-gradient(0deg, #fff, #fff0);
+  width: 1.5px;
+  height: 100%;
+}

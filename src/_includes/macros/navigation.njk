@@ -1,0 +1,63 @@
+{% import "components/icon-header.njk" as Icon %}
+{% macro renderNavItems(items, currentPageUrl) %}
+<ul class="flex flex-col xl:flex-row space-x-2 3xl:space-x-6 menu-list justify-between w-full">
+  {% for item in items %}
+
+  {# (MỚI) Đặt biến kiểm tra xem item có children hợp lệ (tồn tại và không rỗng) #}
+  {% set hasChildren = item.children and item.children.length > 0 %}
+
+  {# Kiểm tra nếu là cha có con #}
+  {% if hasChildren %} {# (SỬA) Dùng biến hasChildren #}
+  {# Kiểm tra nếu trang hiện tại nằm trong bất kỳ URL con nào #}
+  {% set hasActiveChild = false %}
+  {% for child in item.children %}
+  {% if currentPageUrl.startsWith(child.url) %}
+  {% set hasActiveChild = true %}
+  {% endif %}
+  {% endfor %}
+  {% else %}
+  {% set hasActiveChild = false %}
+  {% endif %}
+
+  {# Xác định active cho menu cha #}
+  {% set isActive = (item.url == "/" and currentPageUrl == "/") or (item.url != "/" and
+  currentPageUrl.startsWith(item.url)) or hasActiveChild %}
+
+  {% set activeClass = "bg-active__header" if isActive else "" %}
+  {% set activeClassicon = "fill-primary-color" if isActive else "fill-text-1" %}
+
+  <li class="relative group menu-list_item">
+    <a href="{{ site.baseUrl }}{{ item.url }}"
+      class="flex items-center gap-4 py-2 xl:!w-fit xl:!text-white  px-3 rounded-md transition-colors text-[14px] 2xl:text-[16px] font-medium text-color__header whitespace-nowrap {{ activeClass }}">
+      <span class="flex items-center">
+        {{ Icon.render(item.icon, "min-w-4 h-4 mx-auto" + activeClassicon) }}
+        <span class=" relative">{{ item.text }}</span>
+      </span>
+
+      {% if hasChildren %}
+      <i class="fa-solid fa-angle-down group-hover:rotate-180"></i>
+      {% endif %}
+    </a>
+
+    {# (SỬA) Chỉ render submenu ul khi có children #}
+    {% if hasChildren %}
+    <ul
+      class="submenu xl:absolute xl:top-full xl:left-0 bg-white xl:shadow-sm border rounded-lg xl:py-2 min-w-48 hidden p-2">
+      {% for child in item.children %}
+      {% set isChildActive = currentPageUrl.startsWith(child.url) %}
+      {% set activeChildClass = "bg-gray-100 !text-primary-color" if isChildActive else "!font-medium" %}
+      <li>
+        <a href="{{ site.baseUrl }}{{ child.url }}"
+          class="px-4 py-3 hover:bg-primary-color text-[16px] max-xl:!text-gray-color hover:!text-white font-semibold text-color__header flex items-center gap-3 whitespace-nowrap rounded-sm {{ activeChildClass }}">
+          {{ Icon.render(child.icon, "min-w-4 h-4") }}
+          <span> {{ child.text }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+
+  {% endfor %}
+</ul>
+{% endmacro %}

@@ -1,0 +1,52 @@
+[
+  {
+    "category": "HOTEL ROOM",
+    "name": "DELUXE TRIPLE",
+    "description": "Với phong cách trang trí hiện đại và diện tích 65m2 rộng rãi, phòng Deluxe Triple hướng Biển mang đến một không gian tuyệt đẹp để thư giãn.",
+    "people": "3 người",
+    "size": "48m2",
+    "beds": "1 Double + 1 Twin",
+    "view": "Hướng biển, có ban công",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+  },
+  {
+    "category": "HOTEL ROOM",
+    "name": "DELUXE TRIPLE",
+    "description": "Với phong cách trang trí hiện đại và diện tích 65m2 rộng rãi, phòng Deluxe Triple hướng Biển mang đến một không gian tuyệt đẹp để thư giãn.",
+    "people": "3 người",
+    "size": "48m2",
+    "beds": "1 Double + 1 Twin",
+    "view": "Hướng biển, có ban công",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+  },
+  {
+    "category": "HOTEL ROOM",
+    "name": "DELUXE TRIPLE",
+    "description": "Với phong cách trang trí hiện đại và diện tích 65m2 rộng rãi, phòng Deluxe Triple hướng Biển mang đến một không gian tuyệt đẹp để thư giãn.",
+    "people": "3 người",
+    "size": "48m2",
+    "beds": "1 Double + 1 Twin",
+    "view": "Hướng biển, có ban công",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+  },
+  {
+    "category": "HOTEL ROOM",
+    "name": "DELUXE TRIPLE",
+    "description": "Với phong cách trang trí hiện đại và diện tích 65m2 rộng rãi, phòng Deluxe Triple hướng Biển mang đến một không gian tuyệt đẹp để thư giãn.",
+    "people": "3 người",
+    "size": "48m2",
+    "beds": "1 Double + 1 Twin",
+    "view": "Hướng biển, có ban công",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+  },
+  {
+    "category": "HOTEL ROOM",
+    "name": "DELUXE TRIPLE",
+    "description": "Với phong cách trang trí hiện đại và diện tích 65m2 rộng rãi, phòng Deluxe Triple hướng Biển mang đến một không gian tuyệt đẹp để thư giãn.",
+    "people": "3 người",
+    "size": "48m2",
+    "beds": "1 Double + 1 Twin",
+    "view": "Hướng biển, có ban công",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+  }
+]

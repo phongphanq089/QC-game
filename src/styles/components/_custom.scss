@@ -1,0 +1,70 @@
+.swiper-pagination__style__basic {
+  .swiper-pagination-bullet {
+    background: #636569;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #85754e;
+    opacity: 1;
+    width: 40px;
+    border-radius: 6px;
+  }
+}
+.swiper-pagination.swiper-pagination__style__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  .swiper-pagination-bullet {
+    background: transparent;
+    opacity: 1;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #d4af37;
+    transition: all 0.4s ease;
+  }
+
+  .swiper-pagination-bullet::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #d4af37, #f4e4b0, #d4af37);
+    transition: width 0.4s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    border-color: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  }
+
+  .swiper-pagination-bullet-active::before {
+    width: 100%;
+    animation: progressBar 5s linear;
+  }
+
+  @keyframes progressBar {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
+
+.swiper-scrollbar {
+  .swiper-scrollbar-drag {
+    background: #d4af37;
+    opacity: 1 !important;
+  }
+}

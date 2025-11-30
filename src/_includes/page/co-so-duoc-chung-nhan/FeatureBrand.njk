@@ -1,0 +1,46 @@
+<section class="md:py-10 2xl:py-20 md:px-4 relative">
+  <div class="absolute -right-6 -bottom-3 z-0">
+    <img class="max-sm:hidden max-w-[400px] w-full object-cover opacity-25 "
+      src="https://demo.sweetsoft.vn/Orgacert/images/icon-logo.png" alt="Trang trí" />
+  </div>
+  <div class="absolute -left-6 top-3 z-0">
+    <img class="max-sm:hidden max-w-[400px] w-full object-cover opacity-25 "
+      src="https://demo.sweetsoft.vn/Orgacert/images/icon-logo.png" alt="Trang trí" />
+  </div>
+  <div class="container-layout" data-aos="zoom-in-down" data-aos-delay="50" data-aos-duration="1000">
+    <div class="flex max-xs:flex-col flex-wrap items-center justify-between gap-6">
+      <div class="flex flex-wrapitems-center gap-4">
+        <span class="text-4xl md:text-6xl font-bold text-primary-color opacity-20">01</span>
+        <div>
+          <h2 class="text-xl md:text-4xl font-bold text-gray-800">
+            Thương hiệu
+          </h2>
+          <div class="h-0.5 w-10 md:w-20 bg-primary-color mt-2"></div>
+        </div>
+      </div>
+      <a href="{{ site.baseUrl }}/danh-sach-thuong-hieu/"
+        class="btn btn-primary btn-sm flex items-center gap-2 relative h-fit w-fit">
+        <i class="fa-solid fa-arrow-right"></i>
+        Xem tất cả
+      </a>
+    </div>
+    <div class="relative">
+      <div class="swiper featured-brands-swiper">
+        <div class="swiper-wrapper py-5 md:py-10">
+          {% for brand in featuredBrands.items %}
+          <div class="swiper-slide">
+            <a href="javascript:;"
+              class="bg-white rounded-2xl border shadow py-3 2xl:py-8 px-3 w-full transition-transform duration-300 hover:scale-105 h-full flex items-center">
+              <img src="{{ brand.logoUrl }}" alt="{{ brand.name }}" class="mx-auto h-20 2xl:h-40 object-contain" />
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div class="swiper-pagination-custom-style-v1 swiper-pagination-feature-brand !bottom-[-20px] mx-auto !w-fit">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,93 @@
+<div id="booking-modal-full" tabindex="-1" aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[200] justify-center items-center w-full md:inset-0 h-screen backdrop-blur-md bg-black/60">
+
+  <div class="relative w-full max-w-[1280px] scale-95 max-h-full my-5 lg:mt-10">
+    <div
+      class="relative bg-[#02182B] rounded-xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
+      <div class="relative h-48 md:h-auto w-full hidden md:block">
+        <img src="https://demo.sweetsoft.vn/Aquamarine/images/banner-3.jpg" alt="Resort View"
+          class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#02182B]/20"></div>
+      </div>
+      <div class="relative p-8 md:p-12 flex flex-col justify-center text-white">
+        <button type="button"
+          class="absolute top-4 right-4 text-gray-400 bg-transparent hover:bg-white/10 hover:text-white rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center"
+          data-modal-hide="booking-modal-full">
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+          <span class="sr-only">Đóng</span>
+        </button>
+
+        <h3 class="text-3xl md:text-4xl font-bold mb-2 uppercase tracking-wide text-[#dcb181]">
+          ĐẶT PHÒNG
+        </h3>
+        <p class="text-gray-300 mb-8 text-sm font-light italic">
+          Đảm bảo nhận được phòng đã đặt NGAY BÂY GIỜ!
+        </p>
+
+        <div class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="check-in-date" class="block mb-2 text-sm font-semibold text-gray-300 uppercase">Ngày nhận
+                phòng</label>
+              <div class="relative">
+                <input datepicker datepicker-autohide type="text" id="check-in-date"
+                  class="bg-transparent border border-gray-600 text-white text-sm rounded-sm focus:ring-[#dcb181] focus:border-[#dcb181] block w-full p-3 pl-4 placeholder-gray-500"
+                  placeholder="Chọn ngày đến">
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#dcb181]">
+                  <i class="fa-regular fa-calendar"></i>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label for="check-out-date" class="block mb-2 text-sm font-semibold text-gray-300 uppercase">Ngày trả
+                phòng</label>
+              <div class="relative">
+                <input datepicker datepicker-autohide type="text" id="check-out-date"
+                  class="bg-transparent border border-gray-600 text-white text-sm rounded-sm focus:ring-[#dcb181] focus:border-[#dcb181] block w-full p-3 pl-4 placeholder-gray-500"
+                  placeholder="Chọn ngày đi">
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#dcb181]">
+                  <i class="fa-regular fa-calendar-check"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="guests-select" class="block mb-2 text-sm font-semibold text-gray-300 uppercase">Khách</label>
+              <div class="relative">
+                <select id="guests-select"
+                  class="bg-transparent border border-gray-600 text-white text-sm rounded-sm focus:ring-[#dcb181] focus:border-[#dcb181] block w-full p-3 appearance-none cursor-pointer">
+                  <option class="bg-[#02182B]" value="2-0">2 người lớn, 0 trẻ em</option>
+                  <option class="bg-[#02182B]" value="2-1">2 người lớn, 1 trẻ em</option>
+                  <option class="bg-[#02182B]" value="1-0">1 người lớn, 0 trẻ em</option>
+                  <option class="bg-[#02182B]" value="custom">Tùy chọn khác...</option>
+                </select>
+
+              </div>
+            </div>
+
+            <div>
+              <label for="promo" class="block mb-2 text-sm font-semibold text-gray-300 uppercase">Mã khuyến mãi</label>
+              <input type="text" id="promo"
+                class="bg-[#ffffff]/10 border border-transparent text-white text-sm rounded-sm focus:ring-[#dcb181] focus:border-[#dcb181] block w-full p-3 placeholder-gray-400"
+                placeholder="Nhập mã nếu có">
+            </div>
+          </div>
+
+          <div class="pt-6">
+            <button type="button"
+              class="w-full text-white bg-[#dcb181] hover:bg-[#cfa270] focus:ring-4 focus:outline-none focus:ring-[#dcb181]/50 font-bold rounded-full text-base px-8 py-3 text-center transition-all uppercase tracking-wider shadow-lg transform active:scale-95 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              TÌM PHÒNG
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

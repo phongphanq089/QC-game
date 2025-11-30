@@ -1,0 +1,131 @@
+.home-header_blur {
+  z-index: 10;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  pointer-events: none;
+  background-color: #2d313140;
+  width: 100%;
+  height: 20rem;
+  position: absolute;
+  top: 0%;
+  -webkit-mask-image: linear-gradient(#000 30%, #0000);
+  mask-image: linear-gradient(#000 30%, #0000);
+}
+
+.nav-menu_mobile {
+  .menu-list {
+    @include down2Xl {
+      padding: 0px;
+    }
+
+    .menu-list_item {
+      padding: 5px 0px;
+
+      @include down2Xl {
+        margin: 0px;
+      }
+
+      a {
+        @include down2Xl {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+
+      .submenu {
+        @include down2Xl {
+          border: none;
+          border-left: 2px solid #cfd3d6;
+          border-radius: 0px;
+        }
+        a {
+          @include down2Xl {
+            justify-content: start;
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-100%);
+  animation: slideDown 0.4s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.menu-bottom {
+  position: relative;
+  .booking-action {
+    display: none;
+  }
+}
+.fixed-header {
+  .home-header_blur {
+    display: none;
+  }
+  .header-top {
+    @include minXl {
+      display: none;
+    }
+  }
+
+  .menu-bottom {
+    background-color: white;
+    .container-layout {
+      // margin-right: auto;
+      // margin-inline: unset;
+      padding: 0px;
+
+      .menu-list {
+        justify-content: start;
+        width: fit-content;
+
+        .menu-list_item {
+          margin-right: 10px;
+
+          @include down2Xl {
+            margin-right: 0px;
+          }
+        }
+
+        .menu-list_item a > * {
+          color: black !important;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .booking-action {
+      display: flex;
+    }
+  }
+
+  .action-header {
+    @include down2Xl {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  .header-menu_bottom_list {
+    width: 100%;
+    padding: 10px 0px;
+  }
+}

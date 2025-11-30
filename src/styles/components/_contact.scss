@@ -1,0 +1,30 @@
+.icon-style-six {
+  z-index: 2;
+  border-bottom: 1px solid #0922101a;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .icon-style-six {
+    padding: 30px 20px;
+  }
+}
+.icon-style-six-bg-shape {
+  z-index: 1;
+  border: 1px solid #0922101a;
+  border-bottom-style: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: absolute;
+  inset: 0 1px 0 0;
+  transform: translate(0, 14px) skew(0deg, 3deg);
+}

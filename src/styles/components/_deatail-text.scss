@@ -1,0 +1,210 @@
+/* Container chính cho nội dung bài viết */
+.showDetailBlog {
+  max-width: 100%;
+  color: #374151; /* text-gray-700 */
+}
+
+/* --- Định dạng các thẻ văn bản cơ bản --- */
+.showDetailBlog p {
+  margin-bottom: 8px;
+  font-size: 1rem; /* ~16px */
+  text-align: justify;
+}
+
+.showDetailBlog p.lead {
+  font-size: 18px; /* text-xl */
+  line-height: 1.8;
+  color: #4b5563; /* text-gray-600 */
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* --- Định dạng Tiêu đề (Headings) --- */
+.showDetailBlog h1,
+.showDetailBlog h2,
+.showDetailBlog h3,
+.showDetailBlog h4,
+.showDetailBlog h5,
+.showDetailBlog h6 {
+  color: #111827; /* text-gray-900 */
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.showDetailBlog h1 {
+  font-size: 1.5rem;
+} /* ~36px */
+.showDetailBlog h2 {
+  font-size: 1.4rem;
+} /* ~30px */
+.showDetailBlog h3 {
+  font-size: 1rem;
+} /* ~24px */
+.showDetailBlog h4 {
+  font-size: 18px;
+} /* ~20px */
+
+/* --- Định dạng Danh sách (Lists) --- */
+.showDetailBlog ul,
+.showDetailBlog ol {
+  margin-bottom: 8px;
+  padding-left: 1.625rem; /* Tạo thụt đầu dòng cho bullets/numbers */
+}
+
+.showDetailBlog ul {
+  list-style-type: disc;
+}
+.showDetailBlog ol {
+  list-style-type: decimal;
+}
+
+.showDetailBlog li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Định dạng Link --- */
+.showDetailBlog a {
+  color: #2563eb; /* blue-600 */
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.showDetailBlog a:hover {
+  color: #1e40af; /* blue-800 */
+}
+
+/* --- Định dạng Trích dẫn (Blockquote) --- */
+.showDetailBlog blockquote {
+  border-left: 4px solid #22c55e; /* green-500 */
+  background-color: #f9fafb; /* gray-50 */
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.125rem; /* text-lg */
+  color: #4b5563; /* text-gray-600 */
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.showDetailBlog blockquote footer {
+  margin-top: 0.75rem;
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* text-gray-500 */
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* --- Định dạng Hình ảnh & Chú thích (Figure & Image) --- */
+.showDetailBlog figure {
+  margin: 2.5rem 0;
+}
+
+.showDetailBlog img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.showDetailBlog figcaption {
+  text-align: center;
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* text-gray-500 */
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* --- Các định dạng bổ sung (Optional nhưng nên có) --- */
+.showDetailBlog strong,
+.showDetailBlog b {
+  font-weight: 700;
+  color: #111827; /* Làm đậm màu hơn cho text bold */
+}
+
+.showDetailBlog em,
+.showDetailBlog i {
+  font-style: italic;
+}
+
+.showDetailBlog hr {
+  border: 0;
+  border-top: 1px solid #e5e7eb; /* gray-200 */
+  margin: 3rem 0;
+}
+
+/* --- Định dạng bảng (Table) --- */
+.showDetailBlog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.showDetailBlog th,
+.showDetailBlog td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.showDetailBlog th {
+  background-color: #f3f4f6; /* gray-100 */
+  font-weight: 600;
+}
+
+/* ========================================= */
+/* --- BỔ SUNG RESPONSIVE CHO MOBILE --- */
+/* ========================================= */
+@media (max-width: 640px) {
+  /* Giảm cỡ chữ cho các tiêu đề */
+  .showDetailBlog h1 {
+    font-size: 1.5rem; /* ~30px */
+  }
+  .showDetailBlog h2 {
+    font-size: 1rem; /* ~24px */
+  }
+  .showDetailBlog h3 {
+    font-size: 18px; /* ~20px */
+  }
+  .showDetailBlog h4 {
+    font-size: 16px; /* ~18px */
+  }
+
+  /* Giảm cỡ chữ đoạn lead và khoảng cách */
+  .showDetailBlog p.lead {
+    font-size: 16px; /* ~18px */
+  }
+
+  /* Giảm padding và margin của blockquote */
+  .showDetailBlog blockquote {
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+  }
+
+  /* Giảm margin của ảnh */
+  .showDetailBlog figure {
+    margin: 2rem 0;
+  }
+
+  /* Xử lý bảng (table) tràn */
+  .showDetailBlog table {
+    display: block; /* Quan trọng: Cho phép table cuộn ngang */
+    overflow-x: auto; /* Thêm thanh cuộn ngang khi cần */
+    white-space: nowrap; /* Giữ các ô trên 1 hàng, tránh gãy */
+    font-size: 0.875rem; /* Giảm cỡ chữ bảng 1 chút */
+  }
+
+  .showDetailBlog th,
+  .showDetailBlog td {
+    padding: 0.5rem; /* Giảm padding ô cho gọn */
+  }
+}

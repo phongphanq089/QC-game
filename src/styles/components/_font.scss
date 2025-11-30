@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'SVN Gilroy';
+  src: url('../fonts/SVN-Gilroy Light.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SVN Gilroy';
+  src: url(../fonts/NotoSans-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SVN Gilroy';
+  src: url('../fonts/SVN-Gilroy Medium.otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SVN Gilroy';
+  src: url('../fonts/SVN-Gilroy SemiBold.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SVN Gilroy';
+  src: url('../fonts/SVN-Gilroy Bold.otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'SVN Gilroy';
+  src: url(../font/NotoSans-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'TH Manisans';
+  src: url('../fonts/TH Manisans Extra Bold.ttf');
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.header-font {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 700;
+}

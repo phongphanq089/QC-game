@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "text": "PHÒNG & BIỆT THỰ",
+      "url": "javascript:void(0);",
+      "children": [
+        {
+          "text": "Deluxe Seaview",
+          "url": "javascript:void(0);"
+        },
+        {
+          "text": "Deluxe Triple Seaview",
+          "url": "javascript:void(0);"
+        },
+        {
+          "text": "Senior Deluxe Twin",
+          "url": "javascript:void(0);"
+        },
+        {
+          "text": "Suite Beach Front",
+          "url": "javascript:void(0);"
+        }
+      ]
+    },
+    {
+      "text": "NHÀ HÀNG & BAR",
+      "url": "javascript:void(0);",
+      "children": [
+        {
+          "text": "Ocean Restaurant",
+          "url": "javascript:void(0);"
+        },
+        { "text": "Lobby Bar", "url": "javascript:void(0);" },
+        { "text": "Pool Bar", "url": "javascript:void(0);" },
+        { "text": "Beach Bar", "url": "javascript:void(0);" },
+        { "text": "Beach Club", "url": "javascript:void(0);" }
+      ]
+    },
+    {
+      "text": "SPA & WELLNESS",
+      "url": "javascript:void(0);",
+      "children": [
+        { "text": "Marina Spa", "url": "javascript:void(0);" },
+        { "text": "Gym", "url": "javascript:void(0);" }
+      ]
+    },
+    {
+      "text": "TRẢI NGHIỆM",
+      "url": "javascript:void(0);",
+      "children": [
+        { "text": "Dành cho gia đình", "url": "javascript:void(0);" },
+        { "text": "Dành cho cặp đôi", "url": "javascript:void(0);" },
+        { "text": "Thể thao & Giải trí", "url": "javascript:void(0);" },
+        { "text": "Giải trí", "url": "javascript:void(0);" },
+        { "text": "Mua sắm", "url": "javascript:void(0);" }
+      ]
+    },
+    {
+      "text": "SỰ KIỆN",
+      "url": "javascript:void(0);",
+      "children": [
+        { "text": "Hội họp & Sự kiện", "url": "javascript:void(0);" },
+        { "text": "Tiệc cưới", "url": "javascript:void(0);" }
+      ]
+    },
+    {
+      "text": "ĐIỂM ĐẾN",
+      "url": "javascript:void(0);",
+      "children": [
+        { "text": "Hội họp & Sự kiện", "url": "javascript:void(0);" },
+        { "text": "Tiệc cưới", "url": "javascript:void(0);" }
+      ]
+    },
+    {
+      "text": "ƯU ĐÃI",
+      "url": "javascript:void(0);",
+      "children": [
+        { "text": "Phòng & Biệt thự", "url": "javascript:void(0);" },
+        { "text": "Nhà hàng & Bar", "url": "javascript:void(0);" },
+        { "text": "Wellness", "url": "javascript:void(0);" }
+      ]
+    }
+  ]
+}

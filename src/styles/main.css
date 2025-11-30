@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+@import 'flowbite/src/themes/default';
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-body: #e7ebef;
+  --color-primary-color: #85754e;
+  --color-gray-color: #636569;
+  --color-gold: #fff200;
+  --color-section: #636569;
+  --goldLight: '#FFF8DC';
+  --color-secondary-color: #3726f3;
+  --color-destructive-color: #e22428;
+  --color-disable-color: #9a9a9a;
+  --color-mint: oklch(0.72 0.11 178);
+  --color-desc-aria: #7885ba;
+  --color-text-1: #64748b;
+  --color-style-1: #a8b7f0;
+  --spacing-10: 2.5rem;
+  --breakpoint-old: 350px;
+  --breakpoint-small: 400px;
+  --breakpoint-xs: 450px;
+  --breakpoint-3xl: 1800px;
+
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  @apply p-6 bg-white rounded-lg shadow-md;
+}
+
+.container-layout {
+  @apply max-w-[1600px] w-full mx-auto px-3 md:px-4;
+}
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0c15;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}

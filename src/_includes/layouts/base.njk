@@ -1,0 +1,57 @@
+{# --- Đặt các biến cục bộ để dễ quản lý --- #}
+{% set pageTitle = title or site.defaultTitle %} {% set pageDescription = description or site.defaultDescription %} {%
+set pageOgImage = ogImage or site.defaultOgImage %}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>{{ pageTitle }} | {{ site.name }}</title>
+  <meta name="description" content="{{ pageDescription }}" />
+  <link rel="shortcut icon" type="image/ico" href="{{ site.favicon }}" />
+  {#
+  <link href="https://cdn.prod.website-files.com/658fdf678e96be0f0a78f009/65a2227cf23e0308abc2071f_webclip.png"
+    rel="apple-touch-icon"> #}
+
+  {# ----- Open Graph (Facebook, Zalo, LinkedIn, v.v.) ----- #}
+  <meta property="og:title" content="{{ pageTitle }}" />
+  <meta property="og:description" content="{{ pageDescription }}" />
+  <meta property="og:image" content="{{ pageOgImage }}" />
+  <meta property="og:url" content="{{ pageUrl }}" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+  <meta property="og:type" content="website" />
+
+  {# ----- Twitter Card ( X / Twitter) ----- #}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ pageTitle }}" />
+  <meta name="twitter:description" content="{{ pageDescription }}" />
+  <meta name="twitter:image" content="{{ pageOgImage }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="{{ site.baseLink }}/styles/main.css" />
+  <link rel="stylesheet" href="{{ site.baseLink }}/styles/app.css" />
+
+  {# Block này để các trang con có thể thêm CSS riêng #} {% block headCss %}{%
+  endblock %}
+</head>
+
+{# class="loading-page" #}
+
+<body class="loading-page bg-[#FFF8F0]">
+  {# Block này sẽ chứa toàn bộ nội dung của các trang con #} {% block content
+  %}{% endblock %} {# Block này để các trang con có thể thêm JS riêng #} {%
+  block scripts %}{% endblock %}
+</body>
+
+
+</html>
