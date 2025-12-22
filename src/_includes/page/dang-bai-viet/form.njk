@@ -1,0 +1,187 @@
+<div class="max-w-4xl mx-auto pt-[150px]">
+  <div class="text-center mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider mb-2">
+      Đăng Bài <span class="text-mu-red">Giới Thiệu Server</span>
+    </h1>
+    <p class="text-gray-400 text-sm">Điền đầy đủ thông tin để server của bạn được hiển thị tốt nhất trên Mumoira.io
+    </p>
+  </div>
+
+  <div class="bg-mu-panel border border-mu-border rounded-lg shadow-2xl p-6 md:p-8 relative overflow-hidden">
+    <div
+      class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mu-red to-transparent opacity-70">
+    </div>
+
+    <form action="#" method="POST" class="space-y-6">
+
+      <div class="bg-blue-900/20 border border-blue-800/50 p-4 rounded text-sm text-blue-200 mb-6">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Các trường có dấu <span class="text-red-500">(*)</span> là bắt buộc.</li>
+          <li>Bài viết sẽ được duyệt trong vòng 24h.</li>
+        </ul>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-400 mb-1">Tên MU <span class="text-red-500">*</span></label>
+          <input type="text" placeholder="Ví dụ: MU Việt Nam, MU Hà Nội..."
+            class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Trang chủ <span
+              class="text-red-500">*</span></label>
+          <input type="url" placeholder="https://..."
+            class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Fanpage Hỗ trợ</label>
+          <input type="url" placeholder="https://facebook.com/..."
+            class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Phiên bản <span
+              class="text-red-500">*</span></label>
+          <div class="relative">
+            <select
+              class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white appearance-none focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red cursor-pointer">
+              <option>Season 6.9 Classic</option>
+              <option>Season 15</option>
+              <option>Season 18</option>
+              <option>Season 19 (Mới nhất)</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Loại Server <span
+              class="text-red-500">*</span></label>
+          <div class="flex space-x-4">
+            <label class="cursor-pointer w-1/2">
+              <input type="radio" name="server_type" class="radio-custom hidden" checked>
+              <div
+                class="border border-mu-border bg-black/50 rounded px-4 py-3 flex items-center transition hover:border-gray-500">
+                <div class="radio-dot w-4 h-4 rounded-full border border-gray-500 mr-3 flex-shrink-0"></div>
+                <span class="text-white">Reset</span>
+              </div>
+            </label>
+            <label class="cursor-pointer w-1/2">
+              <input type="radio" name="server_type" class="radio-custom hidden">
+              <div
+                class="border border-mu-border bg-black/50 rounded px-4 py-3 flex items-center transition hover:border-gray-500">
+                <div class="radio-dot w-4 h-4 rounded-full border border-gray-500 mr-3 flex-shrink-0"></div>
+                <span class="text-white">Non-Reset</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-400 mb-1">Tên Máy Chủ <span
+              class="text-red-500">*</span></label>
+          <input type="text" placeholder="Vd: Máy chủ Lorencia"
+            class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition">
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-400 mb-1">Mô tả ngắn (Slogan) <span
+              class="text-red-500">*</span></label>
+          <input type="text" placeholder="Vd: Miễn phí 99%, không webshop, cày cuốc..."
+            class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Alpha Test</label>
+          <div class="relative">
+            <input type="text" id="alpha-picker" placeholder="Chọn ngày giờ..."
+              class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition">
+            <span class="absolute right-4 top-3 text-gray-500 pointer-events-none">📅</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Open Beta <span
+              class="text-red-500">*</span></label>
+          <div class="relative">
+            <input type="text" id="beta-picker" placeholder="Chọn ngày giờ..."
+              class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition">
+            <span class="absolute right-4 top-3 text-gray-500 pointer-events-none">📅</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Kinh nghiệm (Exp) <span
+              class="text-red-500">*</span></label>
+          <div class="relative">
+            <input type="number" placeholder="100"
+              class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition pl-4 pr-12">
+            <span class="absolute right-4 top-3 text-gray-500 font-bold">x</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Tỷ lệ rớt đồ (Drop) <span
+              class="text-red-500">*</span></label>
+          <div class="relative">
+            <input type="number" placeholder="20"
+              class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition pl-4 pr-12">
+            <span class="absolute right-4 top-3 text-gray-500 font-bold">%</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-400 mb-1">Anti Hack</label>
+          <input type="text" placeholder="Vd: Gameguard, UGK, CheatGuard..."
+            class="w-full bg-black/50 border border-mu-border rounded px-4 py-3 text-white focus:outline-none focus:border-mu-red focus:ring-1 focus:ring-mu-red transition">
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <label class="block text-sm font-medium text-gray-400 mb-2">Miêu tả chi tiết game Mu Online của bạn (*): bài
+          viết càng chi tiết sẽ càng thu hút nhiều người xem<span class="text-red-500">*</span></label>
+
+        <div id="editor-container"></div>
+
+        <input type="hidden" name="content" id="content-hidden">
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-mu-border">
+        <div class="w-full md:w-1/2">
+          <label class="block text-sm font-medium text-gray-400 mb-1">Mã bảo vệ <span
+              class="text-red-500">*</span></label>
+          <div class="flex gap-2">
+            <input type="text" placeholder="Nhập mã..."
+              class="bg-black/50 border border-mu-border rounded px-4 py-3 text-white w-full focus:outline-none focus:border-mu-red">
+            <div
+              class="bg-white px-4 py-2 rounded select-none font-bold text-xl text-black tracking-widest flex items-center justify-center min-w-[120px]"
+              style="background-image: url('data:image/svg+xml;base64,...');">
+              9382
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex gap-4">
+        <button type="submit"
+          class="flex-1 bg-mu-red hover:bg-red-700 text-white font-bold py-4 px-6 rounded uppercase tracking-wider transition transform hover:-translate-y-1 shadow-lg shadow-red-900/50">
+          Đăng Server Mới
+        </button>
+        <button type="button"
+          class="px-6 py-4 rounded border border-gray-600 text-gray-400 hover:text-white hover:border-white transition">
+          Xem trước
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <p class="text-center text-gray-600 text-xs mt-8">© 2025 Mumoira.io - Cộng đồng MU Online lớn nhất</p>
+</div>

@@ -4,59 +4,15 @@ description: "MUMOIRA Mu mới ra tháng 12 2025 - Mu Sài Gòn Pc Season 6.9 - 
 permalink: "/"
 ---
 {% import "components/ParallaxHeader.njk" as Header %}
+{% from "macros/mainLayout.njk" import mainLayout %}
 {% extends "layouts/public.njk" %}
-
 {% block mainContent %}
+{% include "page/home/bannerHero.njk" %}
+{% call mainLayout()%}
 <div>
-  {% include "page/home/bannerHero.njk" %}
   {% include "page/home/MainContent.njk" %}
 </div>
-{% endblock %}
+{% endcall %}
 
-
-{% block pageScripts %}
-
-<script>
-  lucide.createIcons();
-</script>
-
-<script>
-  $(document).ready(function () {
-    const $body = $('body');
-    const $mobileMenu = $('#mobile-menu');
-    const $menuIcon = $('.icon-menu');
-    const $closeIcon = $('.icon-close');
-
-    $('#mobile-menu-btn').click(function () {
-      // 1. Toggle Menu
-      $mobileMenu.slideToggle(300);
-
-      // 2. Toggle Scroll Lock Body
-      // Tôi dùng class 'overflow-hidden' của Tailwind,
-      // kèm thêm class 'menu-open' để chắc chắn (force priority)
-      $body.toggleClass('overflow-hidden menu-open');
-
-      // 3. Đổi icon Menu <-> X
-      $menuIcon.toggleClass('hidden');
-      $closeIcon.toggleClass('hidden');
-    });
-
-    // Xử lý khi resize màn hình (đang mở menu mobile mà kéo to ra desktop)
-    $(window).resize(function () {
-      if ($(window).width() >= 1024) { // Breakpoint lg
-        $mobileMenu.hide();
-
-        // MỞ KHÓA SCROLL NGAY LẬP TỨC
-        $body.removeClass('overflow-hidden menu-open');
-
-        // Reset icon về mặc định
-        $menuIcon.removeClass('hidden');
-        $closeIcon.addClass('hidden');
-      }
-    });
-  });
-
-  lucide.createIcons();
-</script>
 
 {% endblock %}

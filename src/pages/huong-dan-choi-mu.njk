@@ -1,0 +1,17 @@
+---
+title: "Hướng dẫn chơi Mu"
+description: "MUMOIRA Mu mới ra tháng 12 2025 - Mu Sài Gòn Pc Season 6.9 - Lâu dài - hấp dẫn - đông vui"
+permalink: "/huong-dan-choi-mu/"
+---
+{% import "components/ParallaxHeader.njk" as Header %}
+{% from "macros/mainLayout.njk" import mainLayout %}
+{% from "components/BannerChild.njk" import bannerChild %}
+{% extends "layouts/public.njk" %}
+{% block mainContent %}
+{% call bannerChild(title="Hệ Thống Ép Đồ", description="Tổng hợp các công thức ép đồ, nâng cấp trang bị từ cơ bản đến
+nâng cao. Tăng sức mạnh cho nhân vật của bạn.")%}
+{% endcall %}
+
+{% include "page/huong-dan-choi-mu/main-content.njk" %}
+
+{% endblock %}

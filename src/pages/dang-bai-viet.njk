@@ -1,0 +1,65 @@
+---
+title: "Đăng bài biết"
+description: "MUMOIRA Mu mới ra tháng 12 2025 - Mu Sài Gòn Pc Season 6.9 - Lâu dài - hấp dẫn - đông vui"
+permalink: "/dang-bai-viet/"
+---
+{% import "components/ParallaxHeader.njk" as Header %}
+{% from "macros/mainLayout.njk" import mainLayout %}
+{% extends "layouts/public.njk" %}
+
+{% block mainContent %}
+{% call mainLayout()%}
+<div>
+  {% include "page/dang-bai-viet/form.njk" %}
+</div>
+{% endcall %}
+
+{% endblock %}
+
+
+{% block pageScripts %}
+<script src="../js/quill.js"></script>
+<script src="../js/flatpickr.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+<script>
+  // 1. Kích hoạt Datepicker (Chọn ngày giờ)
+  const dateConfig = {
+    enableTime: true,
+    dateFormat: "d/m/Y H:i",
+    time_24hr: true,
+    theme: "dark"
+  };
+  flatpickr("#alpha-picker", dateConfig);
+  flatpickr("#beta-picker", dateConfig);
+  // 1. Cấu hình Quill Editor
+  var quill = new Quill('#editor-container', {
+    theme: 'snow',
+    placeholder: '',
+    modules: {
+      toolbar: [
+        [{ 'header': [1, 2, 3, false] }],
+        ['bold', 'italic', 'underline', 'strike'],
+        [{ 'color': [] }, { 'background': [] }],
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+        [{ 'align': [] }],
+        ['link', 'image', 'video'],
+        ['clean']
+      ]
+    }
+  });
+
+  var form = document.querySelector('#serverForm');
+  form.onsubmit = function () {
+
+    var content = document.querySelector('#content-hidden');
+    content.value = quill.root.innerHTML;
+
+    console.log("Dữ liệu sẽ gửi đi:", content.value);
+
+  };
+</script>
+
+{% endblock %}

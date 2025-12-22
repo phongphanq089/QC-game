@@ -18,6 +18,13 @@
   --color-desc-aria: #7885ba;
   --color-text-1: #64748b;
   --color-style-1: #a8b7f0;
+  --color-mu-border: #333333;
+  --color-mu-bg: #0a0a0a;
+  --color-mu-panel: #111111;
+  --color-mu-red: #ce4533;
+  --color-mu-gold: #fcd34d;
+  --color-mu-text: #e5e5e5;
+  --color-mu-muted: #9ca3af;
   --spacing-10: 2.5rem;
   --breakpoint-old: 350px;
   --breakpoint-small: 400px;

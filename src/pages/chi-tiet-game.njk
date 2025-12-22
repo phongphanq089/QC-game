@@ -1,0 +1,17 @@
+---
+title: "Chi tiết game"
+description: "MUMOIRA Mu mới ra tháng 12 2025 - Mu Sài Gòn Pc Season 6.9 - Lâu dài - hấp dẫn - đông vui"
+permalink: "/chi-tiet-game/"
+---
+{% import "components/ParallaxHeader.njk" as Header %}
+{% from "macros/mainLayout.njk" import mainLayout %}
+{% from "components/BannerChild.njk" import bannerChild %}
+{% extends "layouts/public.njk" %}
+{% block mainContent %}
+{% call bannerChild(title="Hướng dẫn chơi Game MU Online PC - Mumoira.info", description="Cẩm nang toàn tập từ cơ bản
+đến nâng cao: Nhân vật, Ép đồ, Sự kiện...")%}
+{% endcall %}
+
+{% include "page/chi-tiet-game/main-content.njk" %}
+
+{% endblock %}

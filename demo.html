@@ -4,277 +4,374 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MU RANKING - Next Gen Interface</title>
+  <title>Hướng Dẫn Chơi MU Online - Mumoira.io</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mu: {
+              bg: '#0a0a0a',
+              panel: '#111111',
+              panelHover: '#1a1a1a',
+              red: '#ce4533',
+              gold: '#fcd34d',
+              text: '#e5e5e5',
+              muted: '#9ca3af',
+              border: '#333333'
+            }
+          },
+          fontFamily: {
+            sans: ['Segoe UI', 'Roboto', 'sans-serif'],
+            serif: ['Cinzel', 'serif'] // Font kiểu cổ điển cho tiêu đề nếu cần
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #0b0c15;
-      color: #a1a1b5;
+    /* Hiệu ứng scroll mượt */
+    html {
+      scroll-behavior: smooth;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    .font-heading {
-      font-family: 'Oswald', sans-serif;
-      text-transform: uppercase;
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
     }
 
-    /* Hiệu ứng nền chéo (Skew Background) giống Youplay */
-    .skew-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(45deg, #161824 0%, #0b0c15 100%);
-      transform: skewY(-3deg);
-      z-index: -1;
-      transform-origin: top left;
+    ::-webkit-scrollbar-track {
+      background: #111;
     }
 
-    /* Hiệu ứng Glow cho ảnh */
-    .img-glow:hover {
-      box-shadow: 0 0 25px rgba(225, 29, 72, 0.4);
-      transform: scale(1.02);
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ce4533;
+    }
+
+    /* Typography cho bài viết */
+    .article-content h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fcd34d;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    .article-content h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #fff;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+      color: #d1d5db;
+    }
+
+    .article-content ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #d1d5db;
+    }
+
+    .article-content img {
+      border-radius: 0.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+      border: 1px solid #333;
+    }
+
+    /* Link styles */
+    .mu-link {
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+    }
+
+    .mu-link:hover {
+      color: #ce4533;
+      padding-left: 5px;
+    }
+
+    .mu-link::before {
+      content: "\f0da";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      margin-right: 8px;
+      color: #555;
+      font-size: 0.8em;
+      transition: color 0.2s;
+    }
+
+    .mu-link:hover::before {
+      color: #ce4533;
     }
   </style>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="bg-mu-bg text-mu-text font-sans min-h-screen">
 
-  <nav class="absolute top-0 w-full z-50 px-6 py-6 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 bg-rose-600 skew-x-[-10deg] flex items-center justify-center">
-        <span class="text-white font-bold skew-x-[10deg] text-xl">M</span>
-      </div>
-      <span class="text-2xl text-white font-heading font-bold tracking-wider">MUMOIRA<span
-          class="text-rose-600">.IO</span></span>
+  <div
+    class="relative bg-black h-64 md:h-80 flex items-center justify-center overflow-hidden border-b border-mu-red/30">
+    <div
+      class="absolute inset-0 bg-[url('https://wallpaperaccess.com/full/1524368.jpg')] bg-cover bg-center opacity-40">
     </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-mu-bg via-transparent to-transparent"></div>
 
-    <div class="hidden md:flex gap-8 text-sm font-bold tracking-widest text-white">
-      <a href="#" class="hover:text-rose-500 transition">TRANG CHỦ</a>
-      <a href="#" class="hover:text-rose-500 transition">SERVER MỚI</a>
-      <a href="#" class="hover:text-rose-500 transition">VIP SERVER</a>
-      <a href="#" class="text-rose-500">ĐĂNG QUẢNG CÁO</a>
-    </div>
-  </nav>
-
-  <header class="relative w-full h-[70vh] flex items-center justify-start overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/40 to-slate-900 z-0">
-      <img src="https://wallpapers.com/images/hd/mu-online-dark-knight-desktop-wallpaper-hx8l0y0y7y0y0y0y.jpg"
-        alt="Background" class="w-full h-full object-cover opacity-50 mix-blend-overlay">
-    </div>
-
-    <div class="absolute inset-0 bg-gradient-to-r from-[#0b0c15] via-[#0b0c15]/80 to-transparent z-10"></div>
-
-    <div class="relative z-20 container mx-auto px-6 pt-20">
-      <h2 class="text-rose-500 font-bold tracking-[0.2em] mb-2 text-sm uppercase">Server Tiêu Điểm</h2>
-      <h1 class="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6">
-        MU HUYỀN THOẠI<br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-purple-600">SEASON 19</span>
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <span
+        class="inline-block py-1 px-3 rounded bg-mu-red/20 text-mu-red text-xs font-bold uppercase tracking-widest mb-3 border border-mu-red/50">Cẩm
+        nang tân thủ</span>
+      <h1 class="text-3xl md:text-5xl font-bold text-white uppercase tracking-wide drop-shadow-lg mb-4">
+        Hướng Dẫn Chơi MU Online <span class="text-mu-gold">Toàn Tập</span>
       </h1>
-      <p class="max-w-xl text-gray-400 mb-8 text-lg border-l-4 border-rose-600 pl-4">
-        Trải nghiệm phiên bản mới nhất với đồ họa 4K. Hệ thống cân bằng class hoàn hảo. Open Beta vào 19:00 hôm nay.
-      </p>
-
-      <div class="flex gap-4">
-        <a href="#"
-          class="px-8 py-3 border border-gray-500 text-white font-bold hover:bg-white hover:text-black transition uppercase tracking-wider flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 0c-6.625 0-12 5.375-12 12 0 5.297 3.037 9.83 7.389 11.275-.013-.377-.024-.959.011-1.42.046-.599.309-2.583.309-2.583s-.077.153-.153.153c-.354 0-.829-.444-.829-1.637 0-2.31 1.34-4.524 3.992-4.524 2.176 0 3.849 1.543 3.849 3.636 0 2.21-1.396 5.09-3.156 5.09-.588 0-1.026-.307-1.189-.667.199-.834.601-3.461.601-3.461s.316.486.316 1.467c0 .878-.297 1.93-1.621 1.93-.761 0-1.341-.795-1.341-1.924 0-1.748 1.156-3.328 3.12-3.328 1.83 0 3.047 1.317 3.047 3.09 0 1.848-1.162 3.328-2.77 3.328-1.554 0-2.285-.92-2.285-.92l-.841 3.203c-.392 1.464-.176 2.302-.124 2.551 1.527.469 3.152.73 4.843.73 6.625 0 12-5.375 12-12s-5.375-12-12-12z" />
-          </svg>
-          Tải Game
-        </a>
-        <a href="#"
-          class="px-8 py-3 bg-gradient-to-r from-rose-600 to-pink-600 text-white font-bold hover:brightness-110 transition uppercase tracking-wider shadow-[0_0_20px_rgba(225,29,72,0.5)]">
-          Đăng Ký Ngay
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <div class="relative py-20">
-    <div class="skew-bg border-t border-gray-800"></div>
-
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        <div class="lg:col-span-8 space-y-12">
-          <div class="flex items-end justify-between mb-8 border-b border-gray-800 pb-4">
-            <h3 class="text-4xl text-white font-heading font-bold uppercase italic">
-              Server <span class="text-rose-600">Mới Ra</span>
-            </h3>
-            <a href="#" class="text-sm text-gray-500 hover:text-white transition uppercase tracking-widest">Xem tất cả
-              ></a>
-          </div>
-
-          <article
-            class="group relative flex flex-col md:flex-row gap-6 bg-[#151621] p-0 border border-gray-800 hover:border-rose-600/50 transition duration-300">
-            <div class="w-full md:w-5/12 h-64 overflow-hidden relative">
-              <div
-                class="absolute top-4 left-4 z-20 bg-rose-600 text-white text-xs font-bold px-3 py-1 uppercase tracking-widest">
-                VIP GOLD</div>
-              <div
-                class="w-full h-full bg-slate-800 group-hover:scale-110 transition duration-700 bg-[url('https://via.placeholder.com/600x400/2a1b3d/ffffff?text=MU+SAIGON')] bg-cover bg-center">
-              </div>
-            </div>
-
-            <div class="flex-1 p-6 flex flex-col justify-center">
-              <div class="flex items-center gap-3 text-xs text-rose-500 font-bold uppercase tracking-widest mb-3">
-                <span><i class="mr-1">★</i> Season 6.9</span>
-                <span class="text-gray-600">|</span>
-                <span>Alphatest: Hôm nay</span>
-              </div>
-
-              <h4 class="text-3xl text-white font-bold mb-3 hover:text-rose-500 transition cursor-pointer">MU SÀI GÒN -
-                HUYỀN THOẠI TRỞ LẠI</h4>
-
-              <p class="text-gray-500 text-sm mb-6 line-clamp-2">
-                Hệ thống Reset Ingame tiện lợi, đồ họa chuẩn Webzen. Cam kết lộ trình lâu dài, không bán đồ Webshop. Đua
-                top nhận Iphone 15.
-              </p>
-
-              <div class="mt-auto flex items-center justify-between border-t border-gray-800 pt-4">
-                <div class="flex gap-2">
-                  <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs font-bold rounded">EXP: 200x</span>
-                  <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs font-bold rounded">DROP: 10%</span>
-                </div>
-                <a href="#"
-                  class="text-white text-sm font-bold uppercase border-b-2 border-rose-600 hover:text-rose-500 transition">Chi
-                  tiết</a>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="group relative flex flex-col md:flex-row gap-6 bg-[#151621] p-0 border border-gray-800 hover:border-blue-500/50 transition duration-300">
-            <div class="w-full md:w-4/12 h-52 overflow-hidden relative">
-              <div
-                class="w-full h-full bg-slate-800 group-hover:scale-110 transition duration-700 bg-[url('https://via.placeholder.com/600x400/1e293b/ffffff?text=MU+HANOI')] bg-cover bg-center">
-              </div>
-            </div>
-            <div class="flex-1 p-5 flex flex-col justify-center">
-              <div class="flex items-center gap-3 text-xs text-blue-500 font-bold uppercase tracking-widest mb-2">
-                <span>Season 18</span>
-                <span class="text-gray-600">|</span>
-                <span class="text-white">Open: 29/11</span>
-              </div>
-              <h4 class="text-2xl text-white font-bold mb-2 hover:text-blue-500 transition cursor-pointer">MU HÀ NỘI
-                2003</h4>
-              <p class="text-gray-500 text-sm mb-4 line-clamp-2">Lối chơi cổ điển, cày cuốc hardcore. Không ủy thác,
-                không bùa chống mất đồ.</p>
-              <a href="#"
-                class="inline-block px-5 py-2 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase hover:bg-blue-600 hover:text-white transition w-fit">Xem
-                thêm</a>
-            </div>
-          </article>
-
-          <article
-            class="group relative flex flex-col md:flex-row gap-6 bg-[#151621] p-0 border border-gray-800 hover:border-purple-500/50 transition duration-300">
-            <div class="w-full md:w-4/12 h-52 overflow-hidden relative">
-              <div
-                class="w-full h-full bg-slate-800 group-hover:scale-110 transition duration-700 bg-[url('https://via.placeholder.com/600x400/4c1d95/ffffff?text=MU+NON-RESET')] bg-cover bg-center">
-              </div>
-            </div>
-            <div class="flex-1 p-5 flex flex-col justify-center">
-              <div class="flex items-center gap-3 text-xs text-purple-500 font-bold uppercase tracking-widest mb-2">
-                <span>Non-Reset</span>
-                <span class="text-gray-600">|</span>
-                <span class="text-white">Open: 30/11</span>
-              </div>
-              <h4 class="text-2xl text-white font-bold mb-2 hover:text-purple-500 transition cursor-pointer">MU ORIGIN
-                PC</h4>
-              <p class="text-gray-500 text-sm mb-4 line-clamp-2">Phiên bản Non-Reset độc lạ. Giới hạn cấp độ 400. Master
-                Skill chuẩn.</p>
-              <a href="#"
-                class="inline-block px-5 py-2 border border-purple-500/30 text-purple-400 text-xs font-bold uppercase hover:bg-purple-600 hover:text-white transition w-fit">Xem
-                thêm</a>
-            </div>
-          </article>
-
-        </div>
-
-        <aside class="lg:col-span-4 space-y-10">
-
-          <div class="bg-[#151621] p-6 border border-gray-800 relative overflow-hidden group">
-            <div
-              class="absolute top-0 right-0 w-20 h-20 bg-rose-600/10 rounded-full blur-xl group-hover:bg-rose-600/20 transition">
-            </div>
-            <h4 class="text-xl text-white font-heading font-bold mb-4">TÌM KIẾM MU</h4>
-            <div class="flex">
-              <input type="text" placeholder="Nhập tên Mu..."
-                class="w-full bg-[#0b0c15] border border-gray-700 text-white px-4 py-3 focus:outline-none focus:border-rose-600 transition text-sm">
-              <button class="bg-rose-600 text-white px-4 hover:bg-rose-700 transition">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-xl text-white font-heading font-bold mb-4 border-l-4 border-purple-600 pl-3">DÀNH CHO BẠN
-            </h4>
-            <div class="space-y-4">
-              <a href="#" class="block relative h-40 group overflow-hidden border border-gray-800">
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-80"></div>
-                <div
-                  class="w-full h-full bg-slate-700 bg-[url('https://via.placeholder.com/400x200/333/fff?text=ADS+SERVER')] bg-cover bg-center group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="absolute bottom-4 left-4 z-20">
-                  <span class="bg-purple-600 text-white text-[10px] px-2 py-0.5 font-bold uppercase">Sponsored</span>
-                  <h5 class="text-lg text-white font-bold mt-1 group-hover:text-purple-400">MÁY CHỦ BÁ VƯƠNG</h5>
-                </div>
-              </a>
-              <a href="#" class="block relative h-40 group overflow-hidden border border-gray-800">
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-80"></div>
-                <div
-                  class="w-full h-full bg-slate-700 bg-[url('https://via.placeholder.com/400x200/550000/fff?text=ADS+PK')] bg-cover bg-center group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="absolute bottom-4 left-4 z-20">
-                  <span class="bg-red-600 text-white text-[10px] px-2 py-0.5 font-bold uppercase">HOT PK</span>
-                  <h5 class="text-lg text-white font-bold mt-1 group-hover:text-red-400">ĐẤU TRƯỜNG RỰC LỬA</h5>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-xl text-white font-heading font-bold mb-4 border-l-4 border-blue-600 pl-3">TỪ KHÓA</h4>
-            <div class="flex flex-wrap gap-2">
-              <a href="#"
-                class="px-3 py-1 bg-[#151621] border border-gray-700 text-xs text-gray-400 hover:text-white hover:border-white transition uppercase">Season
-                6</a>
-              <a href="#"
-                class="px-3 py-1 bg-[#151621] border border-gray-700 text-xs text-gray-400 hover:text-white hover:border-white transition uppercase">Keep
-                Point</a>
-              <a href="#"
-                class="px-3 py-1 bg-[#151621] border border-gray-700 text-xs text-gray-400 hover:text-white hover:border-white transition uppercase">Mu
-                Mới Ra</a>
-              <a href="#"
-                class="px-3 py-1 bg-[#151621] border border-gray-700 text-xs text-gray-400 hover:text-white hover:border-white transition uppercase">Non-Reset</a>
-            </div>
-          </div>
-
-        </aside>
+      <div class="flex items-center justify-center space-x-4 text-sm text-gray-400">
+        <span><i class="far fa-clock mr-1"></i> Cập nhật: 19/12/2024</span>
+        <span><i class="far fa-eye mr-1"></i> 15,203 Lượt xem</span>
       </div>
     </div>
   </div>
 
-  <footer class="bg-black py-10 border-t border-gray-900 mt-10">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-2xl text-white font-heading font-bold tracking-widest mb-4">MUMOIRA<span
-          class="text-rose-600">.IO</span></h2>
-      <p class="text-gray-600 text-sm">© 2025 All Rights Reserved. Designed for Gamers.</p>
+  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <div class="lg:col-span-9">
+
+      <nav class="text-sm mb-6 text-gray-500">
+        <a href="#" class="hover:text-mu-red">Trang chủ</a> <span class="mx-2">/</span>
+        <a href="#" class="hover:text-mu-red">Hướng dẫn</a> <span class="mx-2">/</span>
+        <span class="text-gray-300">Tổng quan MU Online</span>
+      </nav>
+
+      <div class="bg-mu-panel border-l-4 border-mu-gold p-6 rounded-r mb-8 shadow-lg">
+        <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+          <i class="fas fa-list-ul text-mu-gold mr-3"></i> Nội dung chính
+        </h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-sm text-gray-300">
+          <li><a href="#intro" class="hover:text-mu-gold transition flex items-center"><span
+                class="w-6 h-6 rounded-full bg-gray-800 text-xs flex items-center justify-center mr-2 text-gray-500">1</span>
+              MU Online là gì?</a></li>
+          <li><a href="#story" class="hover:text-mu-gold transition flex items-center"><span
+                class="w-6 h-6 rounded-full bg-gray-800 text-xs flex items-center justify-center mr-2 text-gray-500">2</span>
+              Cốt truyện Lục địa MU</a></li>
+          <li><a href="#versions" class="hover:text-mu-gold transition flex items-center"><span
+                class="w-6 h-6 rounded-full bg-gray-800 text-xs flex items-center justify-center mr-2 text-gray-500">3</span>
+              Các phiên bản (Season)</a></li>
+          <li><a href="#races" class="hover:text-mu-gold transition flex items-center"><span
+                class="w-6 h-6 rounded-full bg-gray-800 text-xs flex items-center justify-center mr-2 text-gray-500">4</span>
+              Các chủng tộc (Class)</a></li>
+          <li><a href="#bosses" class="hover:text-mu-gold transition flex items-center"><span
+                class="w-6 h-6 rounded-full bg-gray-800 text-xs flex items-center justify-center mr-2 text-gray-500">5</span>
+              Hệ thống Boss & Quái</a></li>
+          <li><a href="#events" class="hover:text-mu-gold transition flex items-center"><span
+                class="w-6 h-6 rounded-full bg-gray-800 text-xs flex items-center justify-center mr-2 text-gray-500">6</span>
+              Sự kiện ingame</a></li>
+        </ul>
+      </div>
+
+      <article class="article-content bg-mu-panel/50 p-6 md:p-8 rounded border border-mu-border">
+
+        <div id="intro">
+          <h2 class="!mt-0">1. Game MU Online là gì?</h2>
+          <p><strong>MU Online</strong> là một trong những tượng đài game 3D MMORPG đầu tiên tại Hàn Quốc, được phát
+            triển bởi Webzen. Tựa game đưa người chơi vào thế giới giả tưởng dựa trên truyền thuyết về lục địa MU xa xưa
+            với 8 chủng tộc huyền thoại: Chiến Binh, Tiên Nữ, Phù Thủy, Đấu Sĩ...</p>
+          <img src="https://image.webzen.com/Mu/Guide/Main/bg_main_01.jpg" alt="MU Online Gameplay" class="w-full">
+        </div>
+
+        <div id="story">
+          <h2>2. Cốt truyện của Game MU Online</h2>
+          <p>Lục địa MU từng là một đế chế hưng thịnh... <span class="italic text-gray-500">(Nội dung tóm tắt cốt truyện
+              như trong hình bạn gửi)</span>. Antonias, một lãnh chúa phong kiến vì tham vọng đã vô tình hồi sinh
+            <strong>Kundun</strong> - Ác quỷ bóng tối.
+          </p>
+        </div>
+
+        <div id="versions">
+          <h2>3. Các phiên bản lịch sử</h2>
+          <p>Tổng cộng Webzen đã ra mắt 19 Season. Dưới đây là các mốc quan trọng:</p>
+          <ul class="space-y-2">
+            <li><strong class="text-mu-gold">Season 1 (2001):</strong> Ra mắt lần đầu tiên.</li>
+            <li><strong class="text-mu-gold">Season 6 (Huyền thoại):</strong> Phiên bản cân bằng và phổ biến nhất với
+              class Rage Fighter.</li>
+            <li><strong class="text-mu-gold">Season 19 (Mới nhất):</strong> Đồ họa 4K, Class mới Grow Lancer nâng cấp.
+            </li>
+          </ul>
+        </div>
+
+      </article>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold text-white mb-6 border-l-4 border-mu-red pl-4 uppercase">
+          Tất cả các bài hướng dẫn chơi game Mu Online Mobile
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="bg-mu-panel border border-mu-border rounded p-5 hover:border-mu-gold/50 transition duration-300">
+            <h4 class="text-lg font-bold text-mu-gold mb-4 border-b border-gray-800 pb-2 uppercase tracking-wide">
+              <i class="fas fa-book-open mr-2"></i> Cơ Bản
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="mu-link">Bản đồ & NPC</a></li>
+              <li><a href="#" class="mu-link">Hệ thống Auto Season 6</a></li>
+              <li><a href="#" class="mu-link">Hệ thống Auto Season 15+</a></li>
+              <li><a href="#" class="mu-link">Các lệnh trong game</a></li>
+              <li><a href="#" class="mu-link">Bảng Bug Agi</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-mu-panel border border-mu-border rounded p-5 hover:border-mu-gold/50 transition duration-300">
+            <h4 class="text-lg font-bold text-mu-gold mb-4 border-b border-gray-800 pb-2 uppercase tracking-wide">
+              <i class="fas fa-users mr-2"></i> Nhân Vật (Class)
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="mu-link">Chiến Binh (Dark Knight)</a></li>
+              <li><a href="#" class="mu-link">Phù Thủy (Dark Wizard)</a></li>
+              <li><a href="#" class="mu-link">Tiên Nữ (Fairy Elf)</a></li>
+              <li><a href="#" class="mu-link">Đấu Sĩ (Magic Gladiator)</a></li>
+              <li><a href="#" class="mu-link">Chúa Tể (Dark Lord)</a></li>
+              <li><a href="#" class="mu-link">Thiết Binh (Rage Fighter)</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-mu-panel border border-mu-border rounded p-5 hover:border-mu-gold/50 transition duration-300">
+            <h4 class="text-lg font-bold text-mu-gold mb-4 border-b border-gray-800 pb-2 uppercase tracking-wide">
+              <i class="fas fa-hammer mr-2"></i> Hệ Thống Ép Đồ
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="mu-link">Ép cánh cấp 1, 2, 3, 4</a></li>
+              <li><a href="#" class="mu-link">Hệ thống Socket</a></li>
+              <li><a href="#" class="mu-link">Ép dòng vàng (Harmony)</a></li>
+              <li><a href="#" class="mu-link">Ép Sói Tinh</a></li>
+              <li><a href="#" class="mu-link">Giải mã đồ Thần</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-mu-panel border border-mu-border rounded p-5 hover:border-mu-gold/50 transition duration-300">
+            <h4 class="text-lg font-bold text-mu-gold mb-4 border-b border-gray-800 pb-2 uppercase tracking-wide">
+              <i class="fas fa-calendar-alt mr-2"></i> Sự Kiện (Events)
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="mu-link">Huyết Lâu (Blood Castle)</a></li>
+              <li><a href="#" class="mu-link">Quảng Trường Quỷ</a></li>
+              <li><a href="#" class="mu-link">Công Thành Chiến</a></li>
+              <li><a href="#" class="mu-link">Sự kiện Crywolf</a></li>
+              <li><a href="#" class="mu-link">Săn Boss Kundun</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-mu-panel border border-mu-border rounded p-5 hover:border-mu-gold/50 transition duration-300">
+            <h4 class="text-lg font-bold text-mu-gold mb-4 border-b border-gray-800 pb-2 uppercase tracking-wide">
+              <i class="fas fa-gem mr-2"></i> Hệ Thống Vật Phẩm
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="mu-link">Các loại Cánh (Wing)</a></li>
+              <li><a href="#" class="mu-link">Ngọc (Jewel)</a></li>
+              <li><a href="#" class="mu-link">Thú nuôi (Pet)</a></li>
+              <li><a href="#" class="mu-link">Set đồ thần thánh</a></li>
+              <li><a href="#" class="mu-link">Vũ khí Rồng</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-mu-panel border border-mu-border rounded p-5 hover:border-mu-gold/50 transition duration-300">
+            <h4 class="text-lg font-bold text-mu-gold mb-4 border-b border-gray-800 pb-2 uppercase tracking-wide">
+              <i class="fas fa-plus-circle mr-2"></i> Phiên Bản Mới
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="mu-link">Hệ thống Muun Pet</a></li>
+              <li><a href="#" class="mu-link">Hệ thống Ngũ Hành</a></li>
+              <li><a href="#" class="mu-link">Giao diện Ex700</a></li>
+              <li><a href="#" class="mu-link">Cánh 2.5 & Wing 4</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
     </div>
+
+    <div class="lg:col-span-3 space-y-8">
+
+      <div class="bg-mu-panel p-4 rounded border border-mu-border">
+        <div class="relative">
+          <input type="text" placeholder="Tìm hướng dẫn..."
+            class="w-full bg-black/50 border border-gray-700 rounded px-4 py-2 text-white focus:border-mu-red focus:outline-none">
+          <button class="absolute right-0 top-0 h-full px-4 text-gray-400 hover:text-white"><i
+              class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="bg-mu-panel border border-mu-border rounded overflow-hidden sticky top-4">
+        <div class="bg-gradient-to-r from-mu-red to-red-900 px-4 py-3 flex items-center justify-between">
+          <h4 class="font-bold text-white text-sm uppercase"><i class="fas fa-star mr-2"></i> Xem nhiều nhất</h4>
+        </div>
+        <ul class="divide-y divide-gray-800">
+          <li class="p-3 hover:bg-mu-panelHover transition group cursor-pointer flex gap-3">
+            <div class="w-12 h-12 bg-gray-800 rounded shrink-0 overflow-hidden border border-gray-700">
+              <img src="https://via.placeholder.com/50" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h5 class="text-sm text-gray-300 group-hover:text-mu-gold font-medium line-clamp-2">Cách ép Cánh 3 (Wing
+                3) tỷ lệ 100%</h5>
+              <span class="text-xs text-gray-600">12k views</span>
+            </div>
+          </li>
+          <li class="p-3 hover:bg-mu-panelHover transition group cursor-pointer flex gap-3">
+            <div class="w-12 h-12 bg-gray-800 rounded shrink-0 overflow-hidden border border-gray-700">
+              <img src="https://via.placeholder.com/50" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h5 class="text-sm text-gray-300 group-hover:text-mu-gold font-medium line-clamp-2">Hướng dẫn sự kiện
+                Huyết Lâu (Blood Castle)</h5>
+              <span class="text-xs text-gray-600">8.5k views</span>
+            </div>
+          </li>
+          <li class="p-3 hover:bg-mu-panelHover transition group cursor-pointer flex gap-3">
+            <div class="w-12 h-12 bg-gray-800 rounded shrink-0 overflow-hidden border border-gray-700">
+              <img src="https://via.placeholder.com/50" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h5 class="text-sm text-gray-300 group-hover:text-mu-gold font-medium line-clamp-2">Cộng điểm Chiến Binh
+                (DK) bá đạo nhất</h5>
+              <span class="text-xs text-gray-600">20k views</span>
+            </div>
+          </li>
+          <li class="p-3 hover:bg-mu-panelHover transition group cursor-pointer flex gap-3">
+            <div class="w-12 h-12 bg-gray-800 rounded shrink-0 overflow-hidden border border-gray-700">
+              <img src="https://via.placeholder.com/50" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h5 class="text-sm text-gray-300 group-hover:text-mu-gold font-medium line-clamp-2">Tất cả lệnh (Command)
+                cơ bản</h5>
+              <span class="text-xs text-gray-600">15k views</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rounded overflow-hidden shadow-lg border border-mu-border">
+        <img src="https://via.placeholder.com/300x400/222/ce4533?text=QUANG+CAO+SERVER+MU" alt="Ads"
+          class="w-full hover:opacity-90 transition">
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-black border-t border-gray-900 py-6 text-center text-gray-600 text-sm">
+    <p>&copy; 2025 Mumoira.io - Cẩm nang MU Online số 1 Việt Nam</p>
   </footer>
 
 </body>

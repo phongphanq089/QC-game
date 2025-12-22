@@ -1,0 +1,75 @@
+/* Ẩn radio mặc định để custom */
+.radio-custom:checked + div {
+  border-color: #ce4533;
+  background-color: rgba(206, 69, 51, 0.1);
+}
+
+.radio-custom:checked + div .radio-dot {
+  background-color: #ce4533;
+  border-color: #ce4533;
+}
+
+/* Style đè cho TinyMCE tối */
+.tox-tinymce {
+  border: 1px solid #333 !important;
+}
+
+/* Custom Radio */
+.radio-custom:checked + div {
+  border-color: #ce4533;
+  background-color: rgba(206, 69, 51, 0.1);
+}
+
+.radio-custom:checked + div .radio-dot {
+  background-color: #ce4533;
+  border-color: #ce4533;
+}
+
+/* --- QUAN TRỌNG: Tùy chỉnh Quill Editor sang Dark Mode --- */
+.ql-toolbar.ql-snow {
+  border-color: #333 !important;
+  background-color: #1a1a1a;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.ql-container.ql-snow {
+  border-color: #333 !important;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Nền hơi trong suốt */
+  color: #e5e5e5;
+  font-size: 16px;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  height: 300px;
+  /* Chiều cao cố định cho khung soạn thảo */
+}
+
+/* Đổi màu icon trên thanh công cụ sang trắng/xám */
+.ql-snow .ql-stroke {
+  stroke: #999;
+}
+
+.ql-snow .ql-fill,
+.ql-snow .ql-stroke.ql-fill {
+  fill: #999;
+}
+
+.ql-snow .ql-picker {
+  color: #999;
+}
+
+/* Hiệu ứng khi hover vào icon */
+.ql-snow .ql-picker:hover,
+.ql-snow .ql-picker-label:hover,
+.ql-snow button:hover .ql-stroke {
+  stroke: #ce4533 !important;
+}
+
+.ql-snow button:hover .ql-fill {
+  fill: #ce4533 !important;
+}
+
+.ql-snow .ql-picker-label:hover {
+  color: #ce4533 !important;
+}

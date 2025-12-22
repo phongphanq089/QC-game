@@ -1,20 +1,19 @@
 /* Container chính cho nội dung bài viết */
 .showDetailBlog {
   max-width: 100%;
-  color: #374151; /* text-gray-700 */
+  color: #d1d5db;
 }
 
-/* --- Định dạng các thẻ văn bản cơ bản --- */
 .showDetailBlog p {
   margin-bottom: 8px;
-  font-size: 1rem; /* ~16px */
+  font-size: 1rem;
   text-align: justify;
 }
 
 .showDetailBlog p.lead {
-  font-size: 18px; /* text-xl */
+  font-size: 18px;
   line-height: 1.8;
-  color: #4b5563; /* text-gray-600 */
+  color: #d1d5db;
   font-weight: 500;
   margin-bottom: 10px;
   text-align: justify;
@@ -27,11 +26,13 @@
 .showDetailBlog h4,
 .showDetailBlog h5,
 .showDetailBlog h6 {
-  color: #111827; /* text-gray-900 */
-  font-weight: 700;
-  line-height: 1.3;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fcd34d;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
 }
 
 .showDetailBlog h1 {
@@ -52,6 +53,10 @@
 .showDetailBlog ol {
   margin-bottom: 8px;
   padding-left: 1.625rem; /* Tạo thụt đầu dòng cho bullets/numbers */
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d1d5db;
 }
 
 .showDetailBlog ul {
@@ -62,7 +67,18 @@
 }
 
 .showDetailBlog li {
+  position: relative;
+  padding-left: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.showDetailBlog li::before {
+  content: '►';
+  position: absolute;
+  left: 0;
+  color: #ce4533;
+  font-size: 0.8rem;
+  top: 3px;
 }
 
 /* --- Định dạng Link --- */
@@ -77,27 +93,25 @@
   color: #1e40af; /* blue-800 */
 }
 
-/* --- Định dạng Trích dẫn (Blockquote) --- */
 .showDetailBlog blockquote {
-  border-left: 4px solid #22c55e; /* green-500 */
-  background-color: #f9fafb; /* gray-50 */
+  border-left: 4px solid #fcd34d;
+  background-color: transparent;
   padding: 1.5rem 1.5rem 1.5rem 2rem;
   margin: 2rem 0;
   font-style: italic;
-  font-size: 1.125rem; /* text-lg */
-  color: #4b5563; /* text-gray-600 */
+  font-size: 1.125rem;
+  color: #d1d5db;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .showDetailBlog blockquote footer {
   margin-top: 0.75rem;
-  font-size: 0.875rem; /* text-sm */
-  color: #6b7280; /* text-gray-500 */
+  font-size: 0.875rem;
+  color: #6b7280;
   font-style: normal;
   font-weight: 500;
 }
 
-/* --- Định dạng Hình ảnh & Chú thích (Figure & Image) --- */
 .showDetailBlog figure {
   margin: 2.5rem 0;
 }
@@ -112,6 +126,7 @@
     0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid #333;
 }
 
 .showDetailBlog figcaption {
@@ -126,7 +141,7 @@
 .showDetailBlog strong,
 .showDetailBlog b {
   font-weight: 700;
-  color: #111827; /* Làm đậm màu hơn cho text bold */
+  color: white;
 }
 
 .showDetailBlog em,
@@ -146,6 +161,8 @@
   border-collapse: collapse;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+
+  margin-top: 1rem;
 }
 
 .showDetailBlog th,
@@ -155,9 +172,19 @@
   text-align: left;
 }
 
+.showDetailBlog td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+  font-size: 0.9rem;
+}
 .showDetailBlog th {
-  background-color: #f3f4f6; /* gray-100 */
-  font-weight: 600;
+  background: #ce4533;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
 /* ========================================= */

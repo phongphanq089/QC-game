@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Server MU Mới Ra - Mumoira.io</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mu: {
+              bg: '#0a0a0a',
+              panel: '#111111',
+              panelLight: '#1f1f1f',
+              red: '#ce4533',
+              gold: '#fcd34d',
+              text: '#e5e5e5',
+              muted: '#9ca3af',
+              border: '#333333',
+              blue: '#3b82f6' // Màu xanh cho Non-Reset
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Hiệu ứng Glow cho Vip */
+    .vip-card:hover {
+      box-shadow: 0 0 15px rgba(206, 69, 51, 0.3);
+      border-color: #ce4533;
+    }
+
+    /* Custom Scrollbar cho bảng trên mobile */
+    .table-container {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body class="bg-mu-bg text-mu-text font-sans min-h-screen">
+
+  <div class="bg-mu-panel border-b border-mu-border py-8 mb-8 relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-[url('https://wallpaperaccess.com/full/1136154.jpg')] bg-cover bg-center opacity-10">
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider mb-2">
+        Lịch Ra Mắt <span class="text-mu-red">Game MU Online</span>
+      </h1>
+      <p class="text-gray-400">Cập nhật liên tục các máy chủ mới ra: Season 2, Season 6, SS19, Non-Reset...</p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+    <div class="lg:col-span-9">
+
+      <div
+        class="bg-mu-panel border border-mu-border p-4 rounded mb-8 flex flex-wrap gap-4 items-center justify-between">
+        <div class="flex gap-2">
+          <button
+            class="px-4 py-2 bg-mu-red text-white text-sm font-bold rounded shadow hover:bg-red-700 transition">Tất
+            cả</button>
+          <button
+            class="px-4 py-2 bg-black/50 border border-gray-700 text-gray-300 text-sm font-bold rounded hover:text-mu-gold hover:border-mu-gold transition">Non-Reset</button>
+          <button
+            class="px-4 py-2 bg-black/50 border border-gray-700 text-gray-300 text-sm font-bold rounded hover:text-mu-gold hover:border-mu-gold transition">Reset</button>
+        </div>
+        <div class="relative">
+          <select
+            class="bg-black border border-gray-700 text-sm text-gray-300 rounded px-3 py-2 pr-8 focus:border-mu-red focus:outline-none appearance-none">
+            <option>Tháng 12/2025</option>
+            <option>Tháng 01/2026</option>
+          </select>
+          <i class="fas fa-calendar-alt absolute right-3 top-2.5 text-gray-500 pointer-events-none"></i>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-white uppercase border-l-4 border-mu-gold pl-3 mb-4 flex items-center">
+          <i class="fas fa-crown text-mu-gold mr-2"></i> Server VIP Nổi Bật
+        </h2>
+
+        <div class="space-y-4">
+
+          <div
+            class="bg-mu-panel border border-mu-border rounded-lg p-0 md:p-4 flex flex-col md:flex-row gap-4 vip-card transition duration-300 group overflow-hidden relative">
+            <div class="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-2 py-1 z-10">HOT</div>
+
+            <div class="w-full md:w-48 h-32 md:h-auto shrink-0 relative">
+              <img src="https://via.placeholder.com/300x200"
+                class="w-full h-full object-cover rounded border border-gray-800">
+              <div
+                class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-transparent transition">
+              </div>
+            </div>
+
+            <div class="p-4 md:p-0 flex-1">
+              <h3 class="text-lg font-bold text-mu-blue hover:text-mu-gold transition mb-1">
+                <a href="#">Muss2 Season 2 - Cày cuốc - Máy chủ Kalima mới ra</a>
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-2 text-xs">
+                <span class="bg-blue-900/30 text-blue-400 border border-blue-800 px-2 py-0.5 rounded">Season 2</span>
+                <span
+                  class="bg-green-900/30 text-green-400 border border-green-800 px-2 py-0.5 rounded">Non-Reset</span>
+                <span class="bg-gray-800 text-gray-400 border border-gray-700 px-2 py-0.5 rounded">Exp: 5x</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-sm text-gray-400 mt-2">
+                <p><i class="far fa-clock mr-1 text-gray-500"></i> Alpha: <span class="text-gray-300">31/08/2025
+                    (14h)</span></p>
+                <p><i class="fas fa-door-open mr-1 text-mu-red"></i> Open: <strong class="text-white">01/09/2025
+                    (19h)</strong></p>
+              </div>
+            </div>
+
+            <div
+              class="p-4 md:p-0 flex flex-col justify-center gap-2 border-t md:border-t-0 md:border-l border-gray-800 md:pl-4 min-w-[120px]">
+              <a href="#"
+                class="bg-mu-red hover:bg-red-700 text-white text-center text-sm font-bold py-2 rounded transition shadow-lg shadow-red-900/30">
+                CHI TIẾT
+              </a>
+              <a href="#"
+                class="bg-gray-800 hover:bg-gray-700 text-gray-300 text-center text-xs font-bold py-2 rounded transition border border-gray-600">
+                TRANG CHỦ
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-mu-panel border border-mu-border rounded-lg p-0 md:p-4 flex flex-col md:flex-row gap-4 vip-card transition duration-300 group overflow-hidden">
+            <div class="w-full md:w-48 h-32 md:h-auto shrink-0 relative">
+              <img src="https://via.placeholder.com/300x200"
+                class="w-full h-full object-cover rounded border border-gray-800">
+            </div>
+            <div class="p-4 md:p-0 flex-1">
+              <h3 class="text-lg font-bold text-mu-gold hover:text-white transition mb-1">
+                <a href="#">Mu Hà Nội Xưa - Tái hiện ký ức 2003 - Open Beta hôm nay</a>
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-2 text-xs">
+                <span class="bg-yellow-900/30 text-yellow-500 border border-yellow-800 px-2 py-0.5 rounded">Season
+                  1.0</span>
+                <span class="bg-purple-900/30 text-purple-400 border border-purple-800 px-2 py-0.5 rounded">Reset</span>
+                <span class="bg-gray-800 text-gray-400 border border-gray-700 px-2 py-0.5 rounded">Exp: 100x</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-sm text-gray-400 mt-2">
+                <p><i class="far fa-clock mr-1 text-gray-500"></i> Alpha: <span class="text-gray-300">04/12/2025
+                    (10h)</span></p>
+                <p><i class="fas fa-door-open mr-1 text-mu-red"></i> Open: <strong class="text-mu-gold">06/12/2025
+                    (13h)</strong></p>
+              </div>
+            </div>
+            <div
+              class="p-4 md:p-0 flex flex-col justify-center gap-2 border-t md:border-t-0 md:border-l border-gray-800 md:pl-4 min-w-[120px]">
+              <a href="#"
+                class="bg-mu-gold hover:bg-yellow-500 text-black text-center text-sm font-bold py-2 rounded transition">
+                CHI TIẾT
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-white uppercase border-l-4 border-gray-500 pl-3 mb-4 flex items-center">
+          <i class="fas fa-calendar-check text-gray-500 mr-2"></i> Lịch Open Beta Gần Đây
+        </h2>
+
+        <div class="bg-mu-panel border border-mu-border rounded overflow-hidden">
+          <div
+            class="hidden md:grid grid-cols-12 bg-black/60 text-gray-400 text-xs font-bold uppercase py-3 px-4 border-b border-gray-800">
+            <div class="col-span-1 text-center">#</div>
+            <div class="col-span-5">Tên Server / Phiên bản</div>
+            <div class="col-span-2">Loại</div>
+            <div class="col-span-2">Alpha Test</div>
+            <div class="col-span-2 text-right">Open Beta</div>
+          </div>
+
+          <div class="divide-y divide-gray-800">
+
+            <div class="grid grid-cols-1 md:grid-cols-12 items-center p-4 hover:bg-mu-panelLight transition group">
+              <div
+                class="col-span-1 text-center text-2xl font-bold text-gray-700 group-hover:text-mu-red hidden md:block">
+                01</div>
+              <div class="col-span-12 md:col-span-5 mb-2 md:mb-0">
+                <a href="#" class="text-blue-400 font-bold hover:text-white block text-base">Mu Thần Vương - Miễn phí
+                  99%</a>
+                <div class="text-xs text-gray-500 mt-1 flex gap-2">
+                  <span>Server: Thần Vương</span>
+                  <span class="text-gray-700">|</span>
+                  <span>Ver: Season 6.15</span>
+                </div>
+              </div>
+              <div class="col-span-4 md:col-span-2 text-sm text-gray-300">
+                <span class="bg-gray-800 px-2 py-1 rounded text-xs">Non-Reset</span>
+              </div>
+              <div class="col-span-4 md:col-span-2 text-xs text-gray-400">
+                14/10/2025 <br> (14h00)
+              </div>
+              <div class="col-span-4 md:col-span-2 text-right">
+                <div class="text-mu-gold font-bold text-sm">19/10/2025</div>
+                <div class="text-xs text-gray-500">(14h00)</div>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 items-center p-4 bg-black/20 hover:bg-mu-panelLight transition group">
+              <div
+                class="col-span-1 text-center text-2xl font-bold text-gray-700 group-hover:text-mu-red hidden md:block">
+                02</div>
+              <div class="col-span-12 md:col-span-5 mb-2 md:mb-0">
+                <a href="#" class="text-mu-gold font-bold hover:text-white block text-base">Chiến Binh MU - Auto Combo
+                  100%</a>
+                <div class="text-xs text-gray-500 mt-1 flex gap-2">
+                  <span>Server: Loren</span>
+                  <span class="text-gray-700">|</span>
+                  <span>Ver: Season 6.9</span>
+                </div>
+              </div>
+              <div class="col-span-4 md:col-span-2 text-sm text-gray-300">
+                <span class="bg-gray-800 px-2 py-1 rounded text-xs">Reset</span>
+              </div>
+              <div class="col-span-4 md:col-span-2 text-xs text-gray-400">
+                16/10/2025 <br> (18h00)
+              </div>
+              <div class="col-span-4 md:col-span-2 text-right">
+                <div class="text-mu-gold font-bold text-sm">17/10/2025</div>
+                <div class="text-xs text-gray-500">(19h00)</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 items-center p-4 hover:bg-mu-panelLight transition group">
+              <div
+                class="col-span-1 text-center text-2xl font-bold text-gray-700 group-hover:text-mu-red hidden md:block">
+                03</div>
+              <div class="col-span-12 md:col-span-5 mb-2 md:mb-0">
+                <a href="#" class="text-green-400 font-bold hover:text-white block text-base">Mu Sài Gòn - SS2 Nguyên
+                  Thủy</a>
+                <div class="text-xs text-gray-500 mt-1 flex gap-2">
+                  <span>Server: Sài Gòn</span>
+                  <span class="text-gray-700">|</span>
+                  <span>Ver: Season 2</span>
+                </div>
+              </div>
+              <div class="col-span-4 md:col-span-2 text-sm text-gray-300">
+                <span class="bg-gray-800 px-2 py-1 rounded text-xs">Non-Reset</span>
+              </div>
+              <div class="col-span-4 md:col-span-2 text-xs text-gray-400">
+                12/10/2025 <br> (09h00)
+              </div>
+              <div class="col-span-4 md:col-span-2 text-right">
+                <div class="text-gray-500 font-bold text-sm line-through">15/10/2025</div>
+                <span class="text-xs bg-red-900 text-red-200 px-1 rounded">Đã Open</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mt-6 flex justify-center">
+          <button
+            class="bg-mu-panel border border-mu-border text-white px-4 py-2 rounded-l hover:bg-mu-red">Trước</button>
+          <button class="bg-mu-red border border-mu-red text-white px-4 py-2 font-bold">1</button>
+          <button class="bg-mu-panel border border-mu-border text-white px-4 py-2 hover:bg-mu-red">2</button>
+          <button class="bg-mu-panel border border-mu-border text-white px-4 py-2 hover:bg-mu-red">3</button>
+          <button
+            class="bg-mu-panel border border-mu-border text-white px-4 py-2 rounded-r hover:bg-mu-red">Sau</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="lg:col-span-3 space-y-8">
+      <div class="bg-mu-panel p-4 rounded border border-mu-border">
+        <h4 class="font-bold text-white text-sm uppercase mb-3">Tìm server</h4>
+        <div class="space-y-2">
+          <input type="text" placeholder="Tên server..."
+            class="w-full bg-black/50 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-mu-red focus:outline-none">
+          <select class="w-full bg-black/50 border border-gray-700 rounded px-3 py-2 text-sm text-gray-400">
+            <option>Chọn phiên bản</option>
+            <option>Season 2</option>
+            <option>Season 6</option>
+          </select>
+          <button class="w-full bg-mu-red text-white font-bold py-2 rounded text-sm hover:bg-red-700">TÌM KIẾM</button>
+        </div>
+      </div>
+
+      <div class="bg-mu-panel border border-mu-border rounded overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-900 to-blue-800 px-4 py-3">
+          <h4 class="font-bold text-white text-sm uppercase"><i class="fas fa-thumbs-up mr-2"></i> Được bình chọn nhiều
+          </h4>
+        </div>
+        <ul class="divide-y divide-gray-800">
+          <li class="p-3 flex gap-3 items-center group cursor-pointer hover:bg-mu-panelLight">
+            <div class="text-2xl font-bold text-gray-700 group-hover:text-blue-400">01</div>
+            <div>
+              <h5 class="text-sm text-gray-300 font-bold group-hover:text-white">Muss2.co</h5>
+              <span class="text-xs text-gray-500">2,340 Votes</span>
+            </div>
+          </li>
+          <li class="p-3 flex gap-3 items-center group cursor-pointer hover:bg-mu-panelLight">
+            <div class="text-2xl font-bold text-gray-700 group-hover:text-blue-400">02</div>
+            <div>
+              <h5 class="text-sm text-gray-300 font-bold group-hover:text-white">Gamethuviet.net</h5>
+              <span class="text-xs text-gray-500">1,890 Votes</span>
+            </div>
+          </li>
+          <li class="p-3 flex gap-3 items-center group cursor-pointer hover:bg-mu-panelLight">
+            <div class="text-2xl font-bold text-gray-700 group-hover:text-blue-400">03</div>
+            <div>
+              <h5 class="text-sm text-gray-300 font-bold group-hover:text-white">Mu-Hanoi.net</h5>
+              <span class="text-xs text-gray-500">1,500 Votes</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rounded overflow-hidden shadow-lg border border-mu-border">
+        <img src="https://via.placeholder.com/300x500/111/ce4533?text=QUANG+CAO+VIP" class="w-full">
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-black border-t border-gray-900 py-6 text-center text-gray-600 text-sm">
+    <p>&copy; 2025 Mumoira.io - Cổng thông tin MU Online lớn nhất Việt Nam</p>
+  </footer>
+
+</body>
+
+</html>

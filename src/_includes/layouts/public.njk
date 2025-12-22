@@ -16,13 +16,9 @@
 {# Tải các script chung cho TOÀN BỘ khu vực admin #}
 
 <script src="{{ site.baseLink }}/js/lib.js"></script>
-<script src="{{ site.baseLink }}/js/aos.js"> </script>
 <script>
   window.addEventListener('load', function () {
-    // AOS.init({
-    //   once: true
-    // });
-    AOS.init();
+
     $('body').addClass('remove-after');
     setTimeout(() => {
       $('body').removeClass('loading-page remove-after');

@@ -1,0 +1,30 @@
+{% macro mainLayout(title= "", description="") %}
+<div class="max-w-[1900px] mx-auto px-2 grid grid-cols-12 gap-4 pb-20">
+  <aside class="hidden xl:flex col-span-2 space-y-4 sticky top-20 h-fit  flex-col gap-4">
+    <div class="w-full h-[600px] ad-slot rounded border-l-4 border-l-blue-600">
+      <img src="https://static.mumoira.online/static/b/5c178759108086f3722aee0fb909ace8.gif" alt=""
+        class="w-full object-cover">
+    </div>
+    <div class="w-full h-[600px] ad-slot rounded border-l-4 border-l-blue-600">
+      <img src="https://static.mumoira.online/static/b/47b628442c73d0904e3c4c848a76e583.gif" alt=""
+        class="w-full object-cover">
+    </div>
+  </aside>
+
+  <main class="col-span-12 xl:col-span-8 space-y-4">
+    {{ caller() | safe }}
+  </main>
+
+  <aside class="hidden xl:block col-span-2 space-y-4 sticky top-20 h-fit">
+    <div class="w-full h-[600px] ad-slot rounded border-r-4 border-r-red-600">
+      <img src="https://static.mumoira.online/static/b/c4de28f1532a0c8c9e8216a45e714fc4.gif" alt=""
+        class="w-full object-cover">
+    </div>
+    <div class="w-full h-[600px] ad-slot rounded border-l-4 border-l-blue-600">
+      <img src="https://static.mumoira.online/static/b/47b628442c73d0904e3c4c848a76e583.gif" alt=""
+        class="w-full object-cover">
+    </div>
+  </aside>
+</div>
+
+{% endmacro %}

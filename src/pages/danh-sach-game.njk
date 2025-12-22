@@ -1,0 +1,16 @@
+---
+title: "Hướng dẫn chơi Mu"
+description: "MUMOIRA Mu mới ra tháng 12 2025 - Mu Sài Gòn Pc Season 6.9 - Lâu dài - hấp dẫn - đông vui"
+permalink: "/danh-sach-game/"
+---
+{% import "components/ParallaxHeader.njk" as Header %}
+{% from "macros/mainLayout.njk" import mainLayout %}
+{% from "components/BannerChild.njk" import bannerChild %}
+{% extends "layouts/public.njk" %}
+{% block mainContent %}
+{% call bannerChild(title=" Lịch Ra Mắt Game MU Online", description="Cập nhật liên tục các máy chủ mới ra: Season 2,
+Season 6, SS19, Non-Reset...")%}
+{% endcall %}
+{% include "page/danh-sach-game/main-content.njk" %}
+
+{% endblock %}

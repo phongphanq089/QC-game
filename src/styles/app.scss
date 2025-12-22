@@ -7,11 +7,9 @@
 @import './components/swiper';
 @import './components/button';
 @import './components/custom';
-@import './components/featuresection';
-@import './components/cardStyleClipPath';
 @import './components/home-page';
 @import './components/header';
-@import './components/contact';
+@import './components/custom-quill.scss';
 
 :root {
   --text-color__header: #000;
